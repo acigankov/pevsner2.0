@@ -305,7 +305,7 @@ if (isset($_POST['form_order'])) {
                 . 'Комментарий: ' . $comment .  PHP_EOL;
                 
         
-            // sendMessageTelegram($message_to_telegram);
+            sendMessageTelegram($message_to_telegram);
             
             $headers = 'Content-type: text/html; charset=utf-8' . "\r\n" .
                     'MIME-Version: 1.0' . "\r\n" .
@@ -377,7 +377,7 @@ if (isset($_POST['form_order'])) {
             </tbody>
         </table>
     </center>   
-
+ 
 </body>
 </html>
 ';

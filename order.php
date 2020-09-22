@@ -4,14 +4,33 @@
 
 if (isset($_GET['order_sum']) && !empty($_GET['order_sum'])) {
     $sum = (int) $_GET['order_sum'];
+} else {
+    $goaway = 'yes';
 }
 
 if (isset($_GET['order']) && !empty($_GET['order'])) {
     $order = (string) $_GET['order'];
+} else {
+    $goaway = 'yes';
 }
 
-
 ?>
+
+<script id="alfa-payment-script" 
+        type="text/javascript"
+        src="https://testpay.alfabank.ru/assets/alfa-payment.js"> 
+</script>
+
+    <?php if(isset($goaway) && $goaway==='yes'):?>
+        <script>
+            window.location.href = '/';
+        </script>
+    <?php endif;?>
+
+<script>    
+    history.pushState('', document.title, window.location.pathname);
+</script>
+
 
 
 <section class="how" id="how_anchor">
@@ -185,22 +204,15 @@ if (isset($_GET['order']) && !empty($_GET['order'])) {
                     data-version='1.0'
                     data-amount-format='rubli'
                     data-client-info-selector='.order-input-name'
+                    data-email-selector='.order-input-email'
                     data-token='qmr4hi9gnv2fgold9a3bq1f7ji'
                     data-description-selector='.form_order_order'
                     data-language='ru'
                     data-stages='1'
-                    data-email-selector='.order-input-email'
                     ></div>
             </div>
         </div>
 
 </section>
-
-
-
-
-
-
-
 
 <?php include_once './template/footer.php'; ?>

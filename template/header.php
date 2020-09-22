@@ -55,10 +55,7 @@
                      &noscript=1"/>
                 </noscript>
                 <!-- End Facebook Pixel Code -->
-        <script id="alfa-payment-script" 
-        type="text/javascript"
-        src="https://testpay.alfabank.ru/assets/alfa-payment.js"> 
-    </script>
+        
     </head>
     <body>
         <!--button UP-->
