@@ -261,14 +261,16 @@ $(document).ready(function () {
             data: form.serialize(), // Сеарилизуем объект
             success: function (response) { //Данные отправлены успешно
                 var result = $.parseJSON(response);
-                // $('.redeem-promo').css({'display': 'none'});
-                // form.css({'display': 'none'});
-                // result_.removeClass('d-none');
+                $('.redeem-promo').css({'display': 'none'});
+                form.css({'display': 'none'});
+                result_.removeClass('d-none');
                 result_.text(result.text);
-                $('.order-body').text('Заказ #' + result.order_num + ' принят');
+                console.log(result);
+                $('.form_order_number').val(result.order_num);
+                $('.result_').text('Заказ #' + result.order_num + ' принят,  осталось только оплатить!🙂 Для оплаты картой нажмите большую кнопку :');
                 if (result.url) {
-                    $('#modal-order .result_button').removeClass('d-none').addClass('d-flex');
-                    $('#btn-yk-url').attr('href', result.url);
+                    $('.result_button').removeClass('d-none').addClass('d-flex');
+                    // $('#btn-yk-url').attr('href', result.url);
                 }
                 $('#form-order button[type=submit]').removeAttr('disabled').text('Заказать');
                 

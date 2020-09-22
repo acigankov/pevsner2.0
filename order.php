@@ -1,5 +1,19 @@
 <?php include_once './template/header.php'; ?>
 
+<?php
+
+if (isset($_GET['order_sum']) && !empty($_GET['order_sum'])) {
+    $sum = (int) $_GET['order_sum'];
+}
+
+if (isset($_GET['order']) && !empty($_GET['order'])) {
+    $order = (string) $_GET['order'];
+}
+
+
+?>
+
+
 <section class="how" id="how_anchor">
     <div class="container bg-color-white">
         <div class="row">
@@ -14,9 +28,9 @@
                                 </div>-->
             <dl class="row justify-content-center">
                 <dt class="col-sm-3">Сумма :</dt>
-                <dd class="col-sm-9 form-sum_forShow"></dd>
+                <dd class="col-sm-9 form-sum_forShow bold"><?echo $sum; ?> руб.</dd>
                 <dt class="col-sm-3">Заказ :</dt>
-                <dd class="col-sm-9 form-order_forShow"></dd>
+                <dd class="col-sm-9 form-order_forShow"><?echo $order; ?></dd>
             </dl>
 
             <div class="redeem-promo">
@@ -41,7 +55,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control check" name="order-input-name" placeholder="ФИО" value="" minlength="3" required>
+                            <input type="text" class="form-control check order-input-name" name="order-input-name" placeholder="ФИО" value="" minlength="3" required>
                             <div class="invalid-feedback">
                                 неверно заполнено поле
                             </div>
@@ -81,7 +95,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-at"></i></span>
                             </div>
-                            <input type="text" class="form-control check" name="order-input-email" placeholder="Email" required>
+                            <input type="text" class="form-control check" class="order-input-email" name="order-input-email" placeholder="Email" required>
                             <div class="invalid-feedback">
                                 неверный email
                             </div>
@@ -157,13 +171,26 @@
                     </div>
                 </div>
                 <input type="hidden" name="form_order">
-                <input type="hidden" name="form_order_sum" value="">
-                <input type="hidden" name="form_order_order" value="">
+                <input type="hidden" class="form_order_sum" name="form_order_sum" value="<?= $sum;?>">
+                <input type="hidden" class="form_order_order" name="form_order_order" value="<?= $order;?>">
+                <input type="hidden" class="form_order_number" name="form_order_number" value="">
                 <button class="my-btn btn-green" type="submit">Заказать</button>
             </form>
             <div class="result_ d-none animated fadeIn"></div>
             <div class="result_button d-none align-items-center justify-content-center py-2">
-                <a class="btn btn-outline-success px-2" style="color:#000" id="btn-yk-url" href="#" role="button">Ваша ссылка для оплаты</a>
+                <!-- <a class="btn btn-outline-success px-2" style="color:#000" id="btn-yk-url" href="#" role="button">Ваша ссылка для оплаты</a> -->
+                <div id="alfa-payment-button" style="color:#000"
+                    data-amount-selector='.form_order_sum'
+                    data-order-number-selector='.form_order_number'
+                    data-version='1.0'
+                    data-amount-format='rubli'
+                    data-client-info-selector='.order-input-name'
+                    data-token='qmr4hi9gnv2fgold9a3bq1f7ji'
+                    data-description-selector='.form_order_order'
+                    data-language='ru'
+                    data-stages='1'
+                    data-email-selector='.order-input-email'
+                    ></div>
             </div>
         </div>
 

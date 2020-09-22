@@ -163,7 +163,7 @@ if (isset($_POST['form_testimonial'])) {
 }
 
 
-//форма регистрации
+//форма заказа
 if (isset($_POST['form_order'])) {
     
     $error_msg = false;
@@ -305,7 +305,7 @@ if (isset($_POST['form_order'])) {
                 . 'Комментарий: ' . $comment .  PHP_EOL;
                 
         
-            sendMessageTelegram($message_to_telegram);
+            // sendMessageTelegram($message_to_telegram);
             
             $headers = 'Content-type: text/html; charset=utf-8' . "\r\n" .
                     'MIME-Version: 1.0' . "\r\n" .
@@ -388,24 +388,24 @@ if (isset($_POST['form_order'])) {
                 //если оплата картой даем ссылку на оплату
                 if ($payment_type === 2) {
 
-                    $client = new Client();
-                    $client->setAuth($yk_shop_id, $yk_apikey);
-                    $payment = $client->createPayment(
-                            array(
-                        'amount' => array(
-                            'value' => $sum,
-                            'currency' => 'RUB',
-                        ),
-                        'confirmation' => array(
-                            'type' => 'redirect',
-                            'return_url' => 'https://pevsner.ru',
-                        ),
-                        'capture' => true,
-                        'description' => 'Заказ №' . $order_num . ' - ' . $order_description,
-                            ), uniqid('', true)
-                    );
+                    // $client = new Client();
+                    // $client->setAuth($yk_shop_id, $yk_apikey);
+                    // $payment = $client->createPayment(
+                    //         array(
+                    //     'amount' => array(
+                    //         'value' => $sum,
+                    //         'currency' => 'RUB',
+                    //     ),
+                    //     'confirmation' => array(
+                    //         'type' => 'redirect',
+                    //         'return_url' => 'https://pevsner.ru',
+                    //     ),
+                    //     'capture' => true,
+                    //     'description' => 'Заказ №' . $order_num . ' - ' . $order_description,
+                    //         ), uniqid('', true)
+                    // );
 
-                    $url_to_user = $payment['confirmation']['confirmation_url'];
+                    $url_to_user = uniqid();
                     $result = [
                         'text' => "Спасибо за заказ , $name , Менеджер свяжется после оплаты :) Ваш номер заказа : #$order_num",
                         'order_num' => $order_num,
