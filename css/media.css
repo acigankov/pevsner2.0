@@ -1,0 +1,263 @@
+/*xs extra small*/
+@media (min-width: 1px)  {
+
+}    
+
+/*sm small - smartphones*/ 
+@media (max-width: 576px)  {
+    html {
+        font-size: 12px;
+    }
+    
+    /*sm header start*/
+    .logo img {
+        max-width: 75px;
+    }
+    
+    .main-banner {
+        min-height: 300px;
+    }
+    /*sm header end*/
+    
+    
+    /*sm section how start*/
+    .how-content-item {
+        display:flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .how-content-item__img {
+        max-width: 100px;
+    }
+
+    .how-content-item__descr {
+        font-size: 0.9rem;
+    }
+    
+    .how-descr {
+        width: 100%;
+    }
+    
+    .how-descr-title__logo {
+        display: none;
+    }
+    
+    .how-descr-title__text {
+        border: none;
+        padding: 0;
+    }
+
+    .how-descr-title__text span {
+        font-size: 1.2rem;
+    }
+
+    .how-descr-title__logo-right {
+        display: none;
+    }
+
+    .how-descr-content {
+        width: 100%;
+        padding: 2rem;
+    }
+    
+    .how-descr-item {
+        padding: 1rem 0;
+    }
+
+    .how-descr__badge {
+        left: -30px;
+    }
+    
+    /*sm section how end*/
+    
+    /*sm testimonial start*/
+
+    .testimonial-slide {
+        min-height: 290px;
+    }
+    
+    /*sm testimonial end*/
+    
+    /*sm section menu start*/
+    .menu-content .nav-item .nav-link  {
+        padding: 0.5rem 0.8rem;
+    }
+    
+    /*sm кнопки переключения nav-pills start*/
+    .pills-tab-line {
+        width: 80%;
+    }
+    /*sm кнопки переключения nav-pills end*/
+    
+    /*sm menu-carousel start*/
+    .menu-table-description {
+        text-align: center;
+        width: 80%;
+        font-size: 1.35rem;
+        margin: 0 auto;
+    }
+    .menu-content .carousel {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .menu-content .carousel .carousel-item-slide {
+        flex-direction: column;
+    }
+
+    .menu-content .carousel .carousel-item-img {
+        flex-basis: 100%;
+    }
+
+    .menu-content .carousel .carousel-item-text {
+        flex-basis: 100%;
+        padding-top: 1rem;
+        min-height: 210px;
+    }
+
+    .menu-content .carousel .carousel-item-text>h3 {
+        font-size: 1.45rem;
+    }
+
+    .menu-content .carousel .carousel-item-text>span {
+        font-size: 1.2rem;
+    }
+
+    .menu-content .carousel .carousel-control-next-icon, .menu-content .carousel .carousel-control-prev-icon {
+        width: 50px;
+        height: 50px;
+        color:#00B670;
+        background-image: none;
+        font-size: 3rem;
+    }
+
+    .menu-content .carousel .carousel-control-prev {
+        left: 0;
+    }
+
+
+    .menu-content .carousel .carousel-control-next {
+        right: 0;
+    }
+    /*sm menu-carousel end*/ 
+
+
+
+    .menu-buttons button {
+        width: 150px;
+        font-family: 'Roboto-Bold' , sans-serif;
+    }
+
+    .menu-results {
+        max-width: 285px;
+    }
+    
+    .menu-results {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    .menu-cards .menu-cards-title h3 {
+        font-size: 1.2rem;
+    }
+
+    .menu-cards .menu-cards-title h4 {
+        font-size: 0.9rem;
+    }
+    /*sm section menu end*/
+    
+    /*sm section call start*/
+
+    .call-title__text {
+        width: 90%;
+    }
+    /*sm section call end*/
+    
+    /*sm section info start*/
+    .info-item {
+        padding: 0;
+    }
+    .info-item__img {
+        display: none
+    }
+    /*sm section info end*/
+    
+    /*sm section pevsner start*/
+    .pevsner__text {
+        padding: 2rem;
+    }
+    /*sm section pevsner end*/
+    
+    /*sm footer start*/
+    .footer-content, .footer-top-line {
+        flex-direction: column;
+    }
+
+    .footer-content__img {
+        margin-top: 1.8rem;
+    }
+    
+    .footer-top-line .cr_cards-img img {
+        max-width: 30px;
+    }
+    /*sm footer end*/
+}
+
+/*md medium */
+@media (min-width:577px) and (max-width: 768px)  {
+    
+    .container {
+            max-width: 100%;
+        }
+        
+    /*md section how start*/
+    .how-content-item__img {
+        max-width: 120px;
+    }
+    /*md section how end*/
+    
+    /* md section menu start*/
+        /*sm кнопки переключения nav-pills start*/
+    .pills-tab-line {
+        width: 75%;
+    }
+        /*sm кнопки переключения nav-pills end*/
+    /* md section menu end*/
+    
+        /*md testimonial start*/
+
+    .testimonial-slide {
+        min-height: 260px;
+    }
+    
+    /*md testimonial end*/
+    
+}
+
+/*lg large*/
+@media (min-width:769px) and (max-width: 992px)  {
+
+    .container {
+        max-width: 100%;
+    }
+        /*sm testimonial start*/
+
+    .testimonial-slide {
+        min-height: 260px;
+    }
+    
+    /*sm testimonial end*/
+
+}
+
+/*extra large */
+@media (min-width: 1200px)  {
+    /*звонилка*/    
+    .pulse {
+        display: none;
+    }   
+    /*звонилка*/  
+}
