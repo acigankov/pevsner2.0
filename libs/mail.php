@@ -372,7 +372,7 @@ if (isset($_POST['form_order'])) {
                     <td style="padding-top:30px">C Уважением,</td>
                 </tr>
                 <tr>
-                    <td>pevsner.ru.ru</td>
+                    <td>pevsner.ru</td>
                 </tr>
             </tbody>
         </table>
@@ -382,7 +382,7 @@ if (isset($_POST['form_order'])) {
 </html>
 ';
 
-                mail($to, $subject, $message, $headers, '-f zakaz@pevsner.ru.ru');
+                mail($to, $subject, $message, $headers, '-f zakaz@pevsner.ru');
 
 
                 //если оплата картой даем ссылку на оплату

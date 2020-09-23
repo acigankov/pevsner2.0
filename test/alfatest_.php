@@ -27,7 +27,8 @@
     data-language='en'
     data-stages='1'
     data-email-selector='.clientEmail'
-    ></div>
+    >
+    </div>
 </body>
 
 </html>

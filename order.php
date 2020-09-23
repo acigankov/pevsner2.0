@@ -16,11 +16,6 @@ if (isset($_GET['order']) && !empty($_GET['order'])) {
 
 ?>
 
-<script id="alfa-payment-script" 
-        type="text/javascript"
-        src="https://testpay.alfabank.ru/assets/alfa-payment.js"> 
-</script>
-
     <?php if(isset($goaway) && $goaway==='yes'):?>
         <script>
             window.location.href = '/';
@@ -196,7 +191,7 @@ if (isset($_GET['order']) && !empty($_GET['order'])) {
                 <button class="my-btn btn-green" type="submit">Заказать</button>
             </form>
             <div class="result_ d-none animated fadeIn"></div>
-            <div class="result_button d-none align-items-center justify-content-center py-2">
+            <div class="result_button d-none align-items-center justify-content-center py-2" s>
                 <!-- <a class="btn btn-outline-success px-2" style="color:#000" id="btn-yk-url" href="#" role="button">Ваша ссылка для оплаты</a> -->
                 <div id="alfa-payment-button" style="color:#000"
                     data-amount-selector='.form_order_sum'
@@ -209,7 +204,8 @@ if (isset($_GET['order']) && !empty($_GET['order'])) {
                     data-description-selector='.form_order_order'
                     data-language='ru'
                     data-stages='1'
-                    ></div>
+                    >
+                </div>
             </div>
         </div>
 
