@@ -230,6 +230,13 @@ if (isset($_POST['form_order'])) {
         $error_msg = 'Ошибка! данные не переданы! form_order_order';
     }
 
+    //код продукта
+    if (isset($_POST['form_order_product_code']) && !empty($_POST['form_order_product_code'])) {
+        $product_code = htmlspecialchars($_POST['form_order_product_code']);
+    } else {
+        $error_msg = 'Ошибка! данные не переданы! form_order_product_code';
+    }
+
     //тип оплаты
     if (isset($_POST['payment_type']) && !empty($_POST['payment_type'])) {
         $payment_type = (int) ($_POST['payment_type']);
@@ -242,7 +249,7 @@ if (isset($_POST['form_order'])) {
         $comment = $_POST['comment'];
     } 
     
-    //коммент
+    //был промокод
     if (isset($_POST['has_promo'])) {
         $has_promo = true;
     } else {
@@ -267,12 +274,15 @@ if (isset($_POST['form_order'])) {
             switch($payment_type) {
                 case 1 :
                     $payment_type_for_email = 'наличные';
+                    $payment_api_code = '1';
                     break;
                 case 2 :
                     $payment_type_for_email = 'картой';
+                    $payment_api_code = '2';
                     break;
                 case 3 :
                     $payment_type_for_email = 'картой при получении';
+                    $payment_api_code = '94';
                     break;
             }
             //отправляем себе данные о заказе
@@ -306,6 +316,21 @@ if (isset($_POST['form_order'])) {
                 
         
             sendMessageTelegram($message_to_telegram);
+
+            $orderDetails = [
+                'product_code' => $product_code,
+                'address' => $adress,
+                'tel' => '+' . $tel_for_bd,
+                'comment' => $comment,
+                'name' => $name,
+                'order_num' => $order_num,
+                'payment_api_code' => $payment_api_code, 
+                'email' => $email 
+            ];
+
+            sendOrderToFrontpad($orderDetails);
+
+
             
             $headers = 'Content-type: text/html; charset=utf-8' . "\r\n" .
                     'MIME-Version: 1.0' . "\r\n" .

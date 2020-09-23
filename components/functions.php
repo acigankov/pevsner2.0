@@ -519,4 +519,89 @@ function saveTestimonial($name, $tel_for_bd, $comment) {
     return false;
 }
 
+
+//передача заказа во фронтпад////////////
+
+function sendOrderToFrontpad($orderDetails) {
+
+    //артикулы товаров
+$product[0] = $orderDetails['product_code'];	//Пицца
+// $product[1] = "10001";	//Добавка к пицце - сыр
+// $product[2] = "10002";	//Добавка к пицце - бекон
+// $product[3] = "10003";	//Сок
+ 
+//количество товаров
+$product_kol[0] = "1"; //всегда один
+// $product_kol[1] = "1";
+// $product_kol[2] = "1";
+// $product_kol[3] = "1";
+ 
+//модификаторы, если есть 
+$product_mod[1] = "0";  //товар с ключом 1 является модификатором товара с ключом 0
+$product_mod[2] = "0";  //товар с ключом 2 является модификатором товара с ключом 0
+           	 
+//детали заказа в кодировке utf-8
+$param['secret'] = "BE6s6rGD5hFESsRr27ZtAEeb2723ah7BQ4SGen89zDDbYftHbe4BH8Dy5ri5Bftb8aHdnGbN9FQTN8rQbedKbG77Ze2ikenieZntts6sZHazGraKzehBNeyAifKAn2KtK2Q5dHi4fikQDnk2tzk7DHyQR6b6SNkrB3hEAtyFEHf6ZyTeS6bfEzZhs2b9Bnr3dAsDSQ7iidd7A2beSdniD9tT2ySkK7aRytfa7bkefsbGdeNZh37N3nyNKb";				//ключ api
+$param['street']  = urlencode($orderDetails['address']);		//улица
+$param['home']	= ""; 				//дом
+$param['apart']	= "";	 			//квартира
+$param['phone'] = $orderDetails['tel'];		//телефон
+$param['descr']	= urlencode('ОнлайнЗаказ: #' . $orderDetails['order_num'] . '; Коммент: ' . $orderDetails['comment']); 	//комментарий
+$param['name']	= urlencode($orderDetails['name']);		//имя клиента
+$param['mail']	= urlencode($orderDetails['email']);		//имя клиента
+$param['pay']	= urlencode($orderDetails['payment_api_code']);		//имя клиента
+$tags = false;				//отметки заказа
+$hook_status = false;			//отметки заказа - необязательно
+
+//подготовка запроса	
+$data = '';			
+foreach ($param as $key => $value) { 
+$data .= "&".$key."=".$value;
+}
+
+if($tags) {
+foreach ($tags as $key => $value){
+		$data .= "&tags[".$key."]=".$value."";
+}
+}
+
+if($hook_status) {
+foreach ($hook_status as $key => $value){
+		$data .= "&hook_status[".$key."]=".$value."";
+}
+}
+ 
+//содержимое заказа
+foreach ($product as $key => $value){ 
+$data .= "&product[".$key."]=".$value."";
+$data .= "&product_kol[".$key."]=".$product_kol[$key].""; 
+if(isset($product_mod[$key])) { 
+$data .= "&product_mod[".$key."]=".$product_mod[$key].""; 
+} 
+} 
+
+//отправка
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://app.frontpad.ru/api/index.php?new_order");
+curl_setopt($ch, CURLOPT_FAILONERROR, 1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+$result = curl_exec($ch);
+curl_close($ch);
+ 
+//результат
+//var_dump( $result);
+
+// $response = json_decode($result, true);
+
+// if ($response['result'] === 'result') {
+//     return true;
+// } 
+
+}
+
 ?>

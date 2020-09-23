@@ -132,7 +132,7 @@
                                         </div>
                                         <div class="card-link align-items-center justify-content-center d-flex w-100 p-4">
                                             <!-- <button class="my-btn btn-green" type="button" data-sum="<?= $foodset['price'] ?>" data-order="<?= $foodset['name'] ?>" data-toggle="modal" data-target="#modal-order" disabled="disabled">заказать</button> -->
-                                            <a href="/order.php?order_sum=<?= $foodset['price'] ?>&order=<?= $foodset['name'] ?>" style="color:#fff" class="my-btn btn-green" type="button" data-sum="<?= $foodset['price'] ?>" >заказать</a>
+                                            <a href="/order.php?order_sum=<?= $foodset['price'] ?>&order=<?= $foodset['name'] ?>&product_code=<?= $foodset['frontpad_api_id'] ?>" style="color:#fff" class="my-btn btn-green" type="button" data-sum="<?= $foodset['price'] ?>" >заказать</a>
                                         </div>
                                     </div>
                                 </div>

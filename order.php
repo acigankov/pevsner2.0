@@ -14,6 +14,12 @@ if (isset($_GET['order']) && !empty($_GET['order'])) {
     $goaway = 'yes';
 }
 
+if (isset($_GET['product_code']) && !empty($_GET['product_code'])) {
+    $product_code = $_GET['product_code'];
+} else {
+    $goaway = 'yes';
+}
+
 ?>
 
     <?php if(isset($goaway) && $goaway==='yes'):?>
@@ -188,6 +194,7 @@ if (isset($_GET['order']) && !empty($_GET['order'])) {
                 <input type="hidden" class="form_order_sum" name="form_order_sum" value="<?= $sum;?>">
                 <input type="hidden" class="form_order_order" name="form_order_order" value="<?= $order;?>">
                 <input type="hidden" class="form_order_number" name="form_order_number" value="">
+                <input type="hidden" class="form_order_product_code" name="form_order_product_code" value="<?= $product_code;?>">
                 <button class="my-btn btn-green" type="submit">Заказать</button>
             </form>
             <div class="result_ d-none animated fadeIn"></div>
