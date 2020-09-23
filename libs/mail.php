@@ -314,9 +314,10 @@ if (isset($_POST['form_order'])) {
                 . 'Когда привезти: ' . $delivery_time .  PHP_EOL
                 . 'Комментарий: ' . $comment .  PHP_EOL;
                 
-        
+            //отправляем сообщеньку в телеграм
             sendMessageTelegram($message_to_telegram);
 
+            //отправляем заказ в Frontpad
             $orderDetails = [
                 'product_code' => $product_code,
                 'address' => $adress,
