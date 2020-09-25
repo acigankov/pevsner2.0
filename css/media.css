@@ -15,7 +15,7 @@
     }
     
     .main-banner {
-        min-height: 300px;
+        min-height: 200px;
     }
     /*sm header end*/
     
@@ -200,9 +200,9 @@
         margin-top: 1.8rem;
     }
     
-    .footer-top-line .cr_cards-img img {
+    /* .footer-top-line .cr_cards-img img {
         max-width: 30px;
-    }
+    } */
     /*sm footer end*/
 }
 

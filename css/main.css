@@ -823,12 +823,12 @@ footer {
 
 .footer-top-line .cr_cards-img {
     flex-basis: 33.33%;
-    text-align: right;
+    text-align: center;
 }
 
-.footer-top-line .cr_cards-img img {
+/* .footer-top-line .cr_cards-img img {
     max-width: 50px;
-}
+} */
 
 .footer-content__img {
     flex-basis: 20%;
@@ -906,4 +906,28 @@ footer {
 /* order */
 .result_ {
     font-size: 1.5rem;
+}
+
+/*timer*/
+.timer  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.big-text {
+    font-size: 4rem;
+    font-family: 'Nunito-Bold'  , sans-serif;
+    transition: linear 0.5s ease;
 }

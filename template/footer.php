@@ -7,9 +7,11 @@
                             <a href="tel:+74955858203"><span><i class="fas fa-phone"></i></span> +7 (495) 585-8203</a>
                         </div>
                         <div class="cr_cards-img">
-                            <span>Мы принимаем к оплате: </span>
-                            <img src="img/design/sections/footer/visa.png" alt="Мы принимаем Visa" class="img-fluid">
-                            <img src="img/design/sections/footer/mastercard.png" alt="Мы принимаем MasterCard" class="img-fluid">
+                            <span>Оплата банковскими картами осуществляется через АО «АЛЬФА-БАНК».К оплате принимаются карты VISA, MasterCard, МИР.</span>
+                            <!-- <img src="img/design/sections/footer/visa.png" alt="Мы принимаем Visa" class="img-fluid">
+                            <img src="img/design/sections/footer/mastercard.png" alt="Мы принимаем MasterCard" class="img-fluid"> -->
+                            <img src="./img/design/sections/footer/bank-logos.jpg" alt="Мы принимаем" class="img-fluid">
+
                         </div>
                     </div>
                 </div>
@@ -103,5 +105,6 @@
         <!--Custom JS for additional-->
         <script src="/js/custom.js"></script>
         <script src="/js/menu.js"></script>
+        <script src="/js/timer.js"></script>
     </body>
 </html>

@@ -22,7 +22,7 @@
     data-version='1.0'
     data-amount-format='rubli'
     data-client-info-selector='.clientInfo'
-    data-token='qmr4hi9gnv2fgold9a3bq1f7ji'
+    data-token='pcblv1b183t2rrosou7msbs3p8'
     data-description='Самый вкусный торт'
     data-language='en'
     data-stages='1'

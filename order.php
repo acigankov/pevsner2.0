@@ -160,12 +160,12 @@ if (isset($_GET['product_code']) && !empty($_GET['product_code'])) {
                                     Наличными при получении
                                 </label>
                             </div>
-                            <div class="form-check">
+                            <!-- <div class="form-check">
                                 <input class="form-check-input check" type="radio" name="payment_type" value="2" id="order_input_check_card" required>
                                 <label class="form-check-label" for="order_input_check_card">
                                     Оплата картой на сайте онлайн
                                 </label>
-                            </div>
+                            </div> -->
                             <div class="form-check">
                                 <input class="form-check-input check" type="radio" name="payment_type" value="3" id="order_input_check_card_2" required>
                                 <label class="form-check-label" for="order_input_check_card_2">
@@ -207,7 +207,7 @@ if (isset($_GET['product_code']) && !empty($_GET['product_code'])) {
                     data-amount-format='rubli'
                     data-client-info-selector='.order-input-name'
                     data-email-selector='.order-input-email'
-                    data-token='qmr4hi9gnv2fgold9a3bq1f7ji'
+                    data-token='pcblv1b183t2rrosou7msbs3p8'
                     data-description-selector='.form_order_order'
                     data-language='ru'
                     data-stages='1'

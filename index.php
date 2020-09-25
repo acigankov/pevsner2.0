@@ -1,6 +1,24 @@
 <?php include_once './template/header.php'; ?>
 
         <main>
+
+            <section class="banner" id="banner">
+                <div class="container bg-color-white">
+                    <div class="timer-container">
+                        <div class="timer-title text-center pt-3">
+                            <h3>До старта продаж: </h3>
+                        </div>
+                            <ul class="timer" id="timer">
+                                <li><span class="big-text" id="days">0</span><span class="small-text">дней</span></li>
+                                <li><span class="big-text" id="hours">0</span><span class="small-text">часов</span></li>
+                                <li><span class="big-text" id="minutes">0</span><span class="small-text">минут</span></li>
+                                <li><span class="big-text" id="seconds">0</span><span class="small-text">секунд</span></li>
+                            </ul>
+                    </div>
+                </div>
+            </section>
+
+
             <section class="banner" id="banner">
                 <div class="container bg-color-white">
                     <div class="banner__img d-flex align-items-center justify-content-center w-100 py-3">
@@ -11,6 +29,10 @@
                     </div>
                 </div>
             </section>
+
+            
+
+
 
             <section class="how" id="how_anchor">
                 <div class="container bg-color-white">
@@ -89,7 +111,7 @@
                         <div class="col-md-6">
                             <div class="how-descr-item">
                                 <div class="how-descr__badge"><i class="fas fa-check"></i></div>
-                                <h3>Тщательно подобранные меню</h3>
+                                <h3>Удобно использовать</h3>
                                 <span>Вы можете разогреть наши блюда в простой микроволновке
                                     буквально за несколько минут!
                                 </span>
@@ -131,7 +153,6 @@
                                             <?= $foodset['description'] ?>
                                         </div>
                                         <div class="card-link align-items-center justify-content-center d-flex w-100 p-4">
-                                            <!-- <button class="my-btn btn-green" type="button" data-sum="<?= $foodset['price'] ?>" data-order="<?= $foodset['name'] ?>" data-toggle="modal" data-target="#modal-order" disabled="disabled">заказать</button> -->
                                             <a href="/order.php?order_sum=<?= $foodset['price'] ?>&order=<?= $foodset['name'] ?>&product_code=<?= $foodset['frontpad_api_id'] ?>" style="color:#fff" class="my-btn btn-green" type="button" data-sum="<?= $foodset['price'] ?>" >заказать</a>
                                         </div>
                                     </div>
@@ -312,17 +333,23 @@
                         </div>
                         <div class="col-md-6">
                             <div class="pevsner__text">
-                                Доставка осуществляется по районам Москвы и ближайшему Подмосковью с 10:00 до 18:00 ежедневно.
+                            <p>
+                                Доставка осуществляется по районам Москвы и ближайшему Подмосковью с 8:00 до 23:00 ежедневно.
                                 Далее 10км от МКАД доставка платная.
                                 Подробности можно уточнить у менедежера.
+                            </p>
+                            <p>
+                                Для Вашего удобства оплатить заказ можно на сайте с помощью банковской карты, а 
+                                также при получении заказа наличными или банковской картой.
+                            </p>    
+                            <p>
+                                Отмена ранее заказанного рациона питания возможна не позднее 24 часов до даты доставки.            
+                            </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
-
 
             <section class="call" id="contacts_anchor">
                 <div class="container bg-color-white">
