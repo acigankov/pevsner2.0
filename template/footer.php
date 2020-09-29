@@ -47,9 +47,10 @@
                             <div class="dropdown-divider"></div>
                             <p>Оформляя заказ на сайте, Вы соглашаетесь с условиями публичной оферты и обработки
                                 персональных данных :
-                                <a href="docs/terms.docx" title="Соглашение на обработку персональных данных" target="_blank">Соглашение</a>
-                                ,
-                                <a href="docs/oferta.docx" title="Публичная Оферта" target="_blank">Оферта</a>
+                                <a href="../agreement.php" title="Соглашение на обработку персональных данных" target="_blank">Соглашение</a>
+                                | 
+                                <a href="../oferta.php" title="Публичная Оферта" target="_blank">Оферта</a> | 
+                                <a href="../payment-rules.php" title="Правила оплаты" target="_blank">Правила оплаты</a> 
                             </p>
                             <p>© 2019 Pevsner.ru — доставка еды для диетического питания
                             </p>

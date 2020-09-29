@@ -1,7 +1,7 @@
-
 <!-- Modal -->
 
-<div class="modal fade" id="modal-call" tabindex="-1" role="dialog" aria-labelledby="modal_callTitle" aria-hidden="true">
+<div class="modal fade" id="modal-call" tabindex="-1" role="dialog" aria-labelledby="modal_callTitle"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -19,13 +19,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" 
-                                       class="form-control name_mask check" 
-                                       name="call_input_name" 
-                                       placeholder="Имя"  
-                                       value="" 
-                                       required
-                                >
+                                <input type="text" class="form-control name_mask check" name="call_input_name"
+                                    placeholder="Имя" value="" required>
                                 <div class="invalid-feedback">
                                     неверное имя
                                 </div>
@@ -38,7 +33,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-phone"></i></span>
                                 </div>
-                                <input type="text" class="form-control tel_mask check" name="call_input_tel" placeholder="Телефон"  minlength="3" required>
+                                <input type="text" class="form-control tel_mask check" name="call_input_tel"
+                                    placeholder="Телефон" minlength="3" required>
                                 <div class="invalid-feedback">
                                     неверный телефон
                                 </div>
@@ -48,14 +44,17 @@
                     <div class="form-row">
                         <div class="col mb-3">
                             <label for="order-comment">Комментарий к заказу</label>
-                            <textarea class="form-control" name="comment" id="call-comment" rows="3" placeholder="Комментарий к заказу"></textarea>
+                            <textarea class="form-control" name="comment" id="call-comment" rows="3"
+                                placeholder="Комментарий к заказу"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-check">
-                            <input class="form-check-input check" type="checkbox" id="call_input_check" value="" required>
+                            <input class="form-check-input check" type="checkbox" id="call_input_check" value=""
+                                required>
                             <label class="form-check-label" for="call_input_check">
-                                Я прочитал и согласен с <a href="docs/terms.docx" target="_blank">пользовательским соглашением</a>
+                                Я прочитал и согласен с <a href="/agreement.php" target="_blank">пользовательским
+                                    соглашением</a>
                             </label>
                             <div class="invalid-feedback">
                                 необходимо принять условия пользовательского солашения
@@ -63,12 +62,10 @@
                         </div>
                     </div>
                     <input type="hidden" name="form_call">
-                    <button class="my-btn btn-green" type="submit" >Отправить</button>
+                    <button class="my-btn btn-green" type="submit">Отправить</button>
                 </form>
-                
 
                 <div class="result_ d-none animated fadeIn"></div>
-
 
             </div>
         </div>
