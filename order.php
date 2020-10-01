@@ -221,7 +221,7 @@ history.pushState('', document.title, window.location.pathname);
                 <div id="alfa-payment-button" style="color:#000" data-amount-selector='.form_order_sum'
                     data-order-number-selector='.form_order_number' data-version='1.0' data-amount-format='rubli'
                     data-client-info-selector='.order-input-name' data-email-selector='.order-input-email'
-                    data-token='pcblv1b183t2rrosou7msbs3p8' data-description-selector='.form_order_order'
+                    data-token='sfu12nupv41kaadpsu40acof9c' data-description-selector='.form_order_order'
                     data-language='ru' data-stages='1'>
                 </div>
             </div>

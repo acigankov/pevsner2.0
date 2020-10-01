@@ -81,7 +81,7 @@ $orderUrl = $orderUrl[0];
 
     <?php if($orderUrl === '/order.php'):?>
 
-    <script id="alfa-payment-script" type="text/javascript" src="https://testpay.alfabank.ru/assets/alfa-payment.js">
+    <script id="alfa-payment-script" type="text/javascript" src="https://pay2.alfabank.ru/assets/alfa-payment.js">
     </script>
 
     <?php endif; ?>
