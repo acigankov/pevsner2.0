@@ -329,7 +329,7 @@ if (isset($_POST['form_order'])) {
             $orderDetails = [
                 'product_code' => $product_code,
                 'address' => $adress,
-                'tel' => '+' . $tel_for_bd,
+                'tel' => $tel_for_bd,
                 'comment' => $comment,
                 'name' => $name,
                 'order_num' => $order_num,
