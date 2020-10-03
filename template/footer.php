@@ -122,6 +122,7 @@ ym(54740014, "init", {
         <!--Custom JS for additional-->
         <script src="/js/custom.js"></script>
         <script src="/js/menu.js"></script>
+        <script src="/js/timer.js" defer></script>
         </body>
 
         </html>

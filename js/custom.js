@@ -118,8 +118,15 @@ $(document).ready(function () {
         } else
             selector.removeClass('is-invalid');
         selector.addClass('is-valid');
-
     }
+    function validateSelect(selector) {
+        if (selector.val() === '0') {
+            selector.addClass('is-invalid');
+        } else
+            selector.removeClass('is-invalid');
+        selector.addClass('is-valid');
+    }
+
     function validateEmail(selector) {
         var pattern = /.+@.+\..+/i;
         if (!pattern.test(selector.val())) {
@@ -153,6 +160,9 @@ $(document).ready(function () {
             });
             $('#order_input_check').change(function () {
                 validateCheckBox($('#order_input_check'));
+            });
+            $('#selected_table').change(function () {
+                validateSelect($('#selected_table'));
             });
             
             //форма звонка
@@ -208,6 +218,11 @@ $(document).ready(function () {
                 $('#order_input_check').change(function () {
                     validateCheckBox($('#order_input_check'));
                 });
+                validateSelect($('#selected_table'));
+                $('#selected_table').change(function () {
+                    validateSelect($('#selected_table'));
+                });
+                
                 //форма звонка
                 validateName($('.check[name=call_input_name]'));
                 $('.check[name=call_input_name]').keyup(function () {
@@ -393,8 +408,6 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active');
         
     }); 
-    
-    
     
     //форма отзыва
     

@@ -230,6 +230,13 @@ if (isset($_POST['form_order'])) {
         $error_msg = 'Ошибка! данные не переданы! form_order_order';
     }
 
+    //выбранный стол
+    if (isset($_POST['selected_table']) && !empty($_POST['selected_table'])) {
+        $selected_table = htmlspecialchars($_POST['selected_table']);
+    } else {
+        $error_msg = 'Ошибка! данные не переданы! selected_table';
+    }
+
     //код продукта
     if (isset($_POST['form_order_product_code']) && !empty($_POST['form_order_product_code'])) {
         $product_code = htmlspecialchars($_POST['form_order_product_code']);
@@ -266,9 +273,8 @@ if (isset($_POST['form_order'])) {
 
     //если нет ошибок
     if (!$error_msg) {
-        //, boltalkaeda@gmail.com
         //если сохрнанился заказ
-        $order_num = saveOrder($name, $adress, $tel_for_bd, $email, $sum, $order_description, $comment, $delivery_time, $payment_type);
+        $order_num = saveOrder($name, $adress, $tel_for_bd, $email, $sum, $order_description, $comment, $delivery_time, $payment_type, $selected_table);
         if ($order_num) {
             //$payment_type === 1 ? $payment_type_for_email = 'наличные' : $payment_type_for_email = 'картой';
             switch($payment_type) {
@@ -297,6 +303,7 @@ if (isset($_POST['form_order'])) {
                     . 'Заказ : ' . $order_description . ' <br>' . "\r\n"
                     . 'Номер Заказа : ' . $order_num . ' <br>' . "\r\n"
                     . 'Способ Оплаты : ' . $payment_type_for_email . ' <br>' . "\r\n"
+                    . 'Стол : ' . $selected_table . ' <br>' . "\r\n"
                     . 'Когда привезти : ' . $delivery_time . ' <br>' . "\r\n"
                     . 'Купон применен : ' . $has_promo = $has_promo ? 'Да' : 'Нет' . ' <br>' . "\r\n"
                     . 'Комментарий : ' . $comment . ' <br>' . "\r\n";
@@ -309,6 +316,7 @@ if (isset($_POST['form_order'])) {
                 . 'Email : ' . $email . PHP_EOL
                 . 'Сумма : ' . $sum . PHP_EOL
                 . 'Заказ : ' . $order_description . PHP_EOL
+                . 'Стол : ' . $selected_table . PHP_EOL
                 . 'Номер Заказа  : ' . $order_num . PHP_EOL
                 . 'Способ Оплаты : ' . $payment_type_for_email .  PHP_EOL
                 . 'Когда привезти: ' . $delivery_time .  PHP_EOL
@@ -377,7 +385,7 @@ if (isset($_POST['form_order'])) {
                     <td style="padding: 60px 0 20px 0;">Здравствуйте, ' . $name . ' </td>
                 </tr>
                 <tr>
-                    <td>Ваш заказ был принят. Ожидайте звонка менеджера для уточнения деталей. Менеджер свяжется с Вами в рабочее время с 10.00 до 18.00 </td>
+                    <td>Ваш заказ был принят. Ожидайте звонка менеджера для уточнения деталей. Менеджер свяжется с Вами в рабочее время с 09.00 до 19.00 </td>
                 </tr>
                 <tr>
                     <td style="padding: 30px 0 10px 0; text-transform: uppercase">Ваш заказ: </td>
@@ -389,7 +397,7 @@ if (isset($_POST['form_order'])) {
                     <td style="">Сумма заказа: ' . $sum . ' руб.</td>
                 </tr>
                 <tr>
-                    <td style="">Состав заказа: ' . $order_description . '</td>
+                    <td style="">Состав заказа: ' . $order_description . ', ' . $selected_table .  '</td>
                 </tr>
                 <tr>
                     <td style="">Адрес заказа: ' . $adress . '</td>

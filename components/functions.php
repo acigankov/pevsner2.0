@@ -89,14 +89,14 @@ function generateRandomString($length = 10) {
  * @return bool
  */
 
-function saveOrder($name , $adress , $tel , $email , $sum , $order_description , $comment , $delivery_time ,  $payment_type) {
+function saveOrder($name , $adress , $tel , $email , $sum , $order_description , $comment , $delivery_time ,  $payment_type, $selected_table = null) {
 
     if ($name) {
 
         $db = DB::getConnection();
 
-        $sql = 'INSERT INTO orders (user, adress, tel, email, sum , description , comment , delivery_time , payment_type ) '
-                . 'VALUES (:user , :adress, :tel, :email , :sum , :description , :comment, :delivery_time, :payment_type)';
+        $sql = 'INSERT INTO orders (user, adress, tel, email, sum , description , comment , delivery_time , payment_type, selected_table ) '
+                . 'VALUES (:user , :adress, :tel, :email , :sum , :description , :comment, :delivery_time, :payment_type , :selected_table)';
         
         $result = $db->prepare($sql);
         $result->bindParam(':user', $name, PDO::PARAM_STR);
@@ -108,6 +108,7 @@ function saveOrder($name , $adress , $tel , $email , $sum , $order_description ,
         $result->bindParam(':comment', $comment, PDO::PARAM_STR);
         $result->bindParam(':delivery_time', $delivery_time, PDO::PARAM_STR);
         $result->bindParam(':payment_type', $payment_type, PDO::PARAM_INT);
+        $result->bindParam(':selected_table', $selected_table, PDO::PARAM_STR);
 
 
         if ($result->execute()) {

@@ -14,7 +14,21 @@
         </div>
     </section>
 
-
+    <section class="timer-section" id="timer-section">
+        <div class="container bg-color-white">
+            <div class="timer-container">
+                <div class="timer-title text-center pt-3">
+                    <h3>До старта продаж: </h3>
+                </div>
+                <ul class="timer" id="timer">
+                    <li><span class="big-text" id="days">0</span><span class="small-text">дней</span></li>
+                    <li><span class="big-text" id="hours">0</span><span class="small-text">часов</span></li>
+                    <li><span class="big-text" id="minutes">0</span><span class="small-text">минут</span></li>
+                    <li><span class="big-text" id="seconds">0</span><span class="small-text">секунд</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
 
 

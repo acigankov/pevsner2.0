@@ -134,6 +134,19 @@ history.pushState('', document.title, window.location.pathname);
                 </div>
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
+                        <select class="custom-select check" name="selected_table" id="selected_table" required>
+                            <option value="0">выберите стол</option>
+                            <?php foreach ($tables as $table) : ?>
+                            <option value="<?= $table['name']?>"><?= $table['name']?></option>
+                            <?php endforeach ?>
+                        </select>
+                        <div class="invalid-feedback">
+                            неверно заполнено поле
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
                         <label for="order-comment">Комментарий к заказу</label>
                         <textarea class="form-control" name="comment" id="order-comment" rows="3"
                             placeholder="Комментарий к заказу"></textarea>
@@ -158,7 +171,6 @@ history.pushState('', document.title, window.location.pathname);
                             </label>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="dropdown-divider"></div>
@@ -188,7 +200,6 @@ history.pushState('', document.title, window.location.pathname);
                                     Картой при получении
                                 </label>
                             </div>
-
                         </div>
                     </div>
                 </div>
