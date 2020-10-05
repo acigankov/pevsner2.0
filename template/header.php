@@ -35,7 +35,7 @@ $orderUrl = $orderUrl[0];
     <meta property="og:site_name" content="pevsner.ru">
     <meta property="og:url" content="https://pevsner.ru/">
     <meta property="og:description" content="Доставка еды для диетического питания">
-    <meta property="og:image" content="https://pevsner.ru/img/design/logo.png">
+    <meta property="og:image" content="https://pevsner.ru/img/design/logo/logo.png">
     <meta property="og:type" content="website">
     <!--Bootstrap-->
     <link rel="stylesheet" href="/css/bootstrap.min.css">

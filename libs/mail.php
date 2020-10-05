@@ -309,7 +309,7 @@ if (isset($_POST['form_order'])) {
                     . 'Комментарий : ' . $comment . ' <br>' . "\r\n";
             // Для отправки HTML-письма должен быть установлен заголовок Content-type
             
-            $message_to_telegram = '«Pevsner.ru». Новый заказ 🥳' . PHP_EOL
+            $message_to_telegram = '«Pevsner.ru». Новый #заказ 🥳' . PHP_EOL
                 . 'Покупатель : ' . $name . PHP_EOL
                 . 'Адрес : ' . $adress . PHP_EOL
                 . 'Телефон : ' . $tel_for_bd . PHP_EOL
