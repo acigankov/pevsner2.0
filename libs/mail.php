@@ -45,7 +45,7 @@ if (isset($_POST['form_call'])) {
         //сохраняем чувака
         if (saveUser($name, $tel_for_bd, $comment)) {
 
-            $to = 'acigankov@inbox.ru, v.v.ilyin@yandex.ru, gvozdizakaz@yandex.ru';
+            $to = 'acigankov@inbox.ru, v.v.ilyin@yandex.ru, zakaz@pevsner.ru';
             $subject = 'Pevsner.ru. Гражданин ждет звонка';
             $message = 'hello Manager! <br>' . "\r\n"
                     . $name . ' ждет звонка и просит перезвонить по номеру : <br>' . "\r\n"
@@ -123,7 +123,7 @@ if (isset($_POST['form_testimonial'])) {
         //сохраняем отзыв
         if (saveTestimonial($name, $tel_for_bd, $testimonial)) {
 
-            $to = 'acigankov@inbox.ru, v.v.ilyin@yandex.ru, gvozdizakaz@yandex.ru';
+            $to = 'acigankov@inbox.ru, v.v.ilyin@yandex.ru, zakaz@pevsner.ru';
             $subject = 'Pevsner.ru. Новый отзыв';
             $message = 'hello Manager! <br>' . "\r\n"
                     . 'Имя :' .  $name . '<br>' . "\r\n"
@@ -292,7 +292,7 @@ if (isset($_POST['form_order'])) {
                     break;
             }
             //отправляем себе данные о заказе
-            $to = 'acigankov@inbox.ru, v.v.ilyin@yandex.ru, gvozdizakaz@yandex.ru';
+            $to = 'acigankov@inbox.ru, v.v.ilyin@yandex.ru, zakaz@pevsner.ru';
             $subject = '«Pevsner.ru». Новый заказ';
             $message = 'hello Manager! <br>' . "\r\n"
                     . 'Покупатель : ' . $name . ' <br>' . "\r\n"
