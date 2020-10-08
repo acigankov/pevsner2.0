@@ -135,14 +135,13 @@ $orderUrl = $orderUrl[0];
                 </nav>
             </div>
             <div class="row">
-                <!-- <div class="main-banner d-flex w-100 text-color-white align-items-center justify-content-center flex-column">
-                     <img src="/img/design/header/logo-pic-white.png" alt="logo-pic" class="main-banner__logo img-fluid">
+                <div
+                    class="main-banner d-flex w-100 text-color-white align-items-center justify-content-center flex-column">
+                    <img src="/img/design/header/logo-pic-white.png" alt="logo-pic" class="main-banner__logo img-fluid">
                     <div class="main-banner__text">
-                        <<h1>Доставка готового питания по диетическим столам Певзнера</h1>
-                        <h1>Мы скоро откроемся ! </h1> 
-                    </div> 
-                </div>  -->
-                <img src="./img/design/header/banner.jpg" alt="banner" class="img-fluid">
+                        <h1>Доставка готового питания по диетическим столам Певзнера</h1>
+                    </div>
+                </div>
             </div>
         </div>
     </header>

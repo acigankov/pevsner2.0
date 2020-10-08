@@ -293,7 +293,7 @@ a,a:focus,a:link,a:visited {
 }
 
 .main-banner {
-    background-image: url('../img/design/header/overlay.png') , url('../img/design/header/banner.jpg');
+    background-image: url('../img/design/header/banner.jpg');
     background-color: #222;
     background-repeat: repeat;
     background-size: 100% 100%;
