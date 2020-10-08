@@ -28,5 +28,6 @@ $showMenu = true;
 $fooddays = getFooddays();
 $dishes_first = getDishes(1, 1);
 $testimonials = getTestimonials();
+$timer_section = false;
 
 ?>

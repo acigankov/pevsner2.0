@@ -14,6 +14,7 @@
         </div>
     </section>
 
+    <?php if ($timer_section) : ?>
     <section class="timer-section" id="timer-section">
         <div class="container bg-color-white">
             <div class="timer-container">
@@ -29,7 +30,7 @@
             </div>
         </div>
     </section>
-
+    <?php endif; ?>
 
 
     <section class="how" id="how_anchor">
