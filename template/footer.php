@@ -30,16 +30,18 @@
                             </div>
                             <div
                                 class="footer-content-info__contact d-flex text-left align-items-center justify-content-around py-2">
-                                <span>По любым вопросам <br> пишите сюда:</span>
-                                <?php $showWAphone = false; ?>
                                 <?php if($showWAphone) : ?>
-                                <a href="https://sapp.com/send?phone=79257390201" target="_blank" title="WhatsApp"
+                                <a href="https://sapp.com/send?phone=79055576669" target="_blank" title="WhatsApp"
                                     class="footer-content-info-soc__link"> <i class="fab fa-whatsapp"></i> </a>
+                                <?php endif ?>
+                                <?php if($showInstIcon) : ?>
+                                <a href="https://www.instagram.com/dieta_pevsner.ru/" target="_blank" title="WhatsApp"
+                                    class="footer-content-info-soc__link"> <i class="fab fa-instagram"></i> </a>
                                 <?php endif ?>
                                 <a href="mailto:zakaz@pevsner.ru?subject=Вопрос&nbsp;с&nbsp;сайта&nbsp;pevsner.ru"
                                     target="_blank" title="E-mail" class="footer-content-info-soc__link"> <i
-                                        class="far fa-envelope"></i> </a>
-
+                                        class="far fa-envelope"></i>
+                                </a>
                             </div>
                         </div>
 

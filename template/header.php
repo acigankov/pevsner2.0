@@ -109,8 +109,9 @@ $orderUrl = $orderUrl[0];
                     </div>
 
                     <div class="top-line__phone d-flex flex-column justify-content-between text-color-white ml-2">
-                        <span class="top-line__city "><i class="fas fa-map-marker-alt"
-                                style="width: 17.5px;text-align: center;"></i> &nbsp; Москва</span>
+                        <span class="top-line__city "><i class="fab fa-instagram" style="text-align: center;"></i>
+                            &nbsp; <a href="https://www.instagram.com/dieta_pevsner.ru/"
+                                target="_blank">Instagram</a></span>
                         <a href="tel:+74955858203" class="d-none d-sm-flex"><span><i
                                     class="fas fa-phone"></i></span>&nbsp; +7 (495) 585-8203</a>
                         <span class="align-items-center d-flex"><i class="fas fa-business-time"></i> &nbsp; 09:00 -
@@ -135,13 +136,15 @@ $orderUrl = $orderUrl[0];
                 </nav>
             </div>
             <div class="row">
-                <div
+                <a href="https://www.instagram.com/dieta_pevsner.ru/" target="_blank"><img class="img-fluid"
+                        src="/img/design/header/banner.jpg" alt=""></a>
+                <!-- <div
                     class="main-banner d-flex w-100 text-color-white align-items-center justify-content-center flex-column">
                     <img src="/img/design/header/logo-pic-white.png" alt="logo-pic" class="main-banner__logo img-fluid">
                     <div class="main-banner__text">
                         <h1>Доставка готового питания по диетическим столам Певзнера</h1>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </header>
