@@ -86,7 +86,7 @@
 
         <?php if ($_SERVER['HTTP_HOST'] === 'pevsner.ru'): ?>
         <!-- Yandex.Metrika counter -->
-        <script>
+        <script type="text/javascript">
 (function(m, e, t, r, i, k, a) {
     m[i] = m[i] || function() {
         (m[i].a = m[i].a || []).push(arguments)
