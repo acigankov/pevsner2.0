@@ -76,8 +76,10 @@
                     </div>
 
                 </div>
-                <div class="d-flex w-100 align-items-center justify-content-center p-2">
-                    <a class="anchor__link call-title__button my-btn btn-green my-5" href="#menu_anchor">заказать</a>
+                <div class="d-flex w-100 flex-column align-items-center justify-content-center p-2">
+                    <span>Оформить заказ можно на сайте или по телефону +7 (495) 585-82-03</span>
+                    <a class="call-title__button my-btn btn-green my-5" data-toggle="modal" data-target="#modal-call"
+                        href="#menu_anchor">заказать</a>
                 </div>
             </div>
             <div class="row how-descr-content">
@@ -382,7 +384,9 @@
                         Просто скажите какую диету прописал вам врач
                         и мы подготовим для вас меню
                     </span>
-                    <a class="anchor__link call-title__button my-btn btn-green my-5" href="#menu_anchor">заказать</a>
+                    <span>Оформить заказ можно на сайте или по телефону +7 (495) 585-82-03</span>
+                    <a class="call-title__button my-btn btn-green my-5" href="#menu_anchor" data-toggle="modal"
+                        data-target="#modal-call">заказать</a>
                 </div>
             </div>
         </div>
