@@ -77,7 +77,7 @@
 
                 </div>
                 <div class="d-flex w-100 flex-column align-items-center justify-content-center p-2">
-                    <span>Оформить заказ можно на сайте или по телефону +7 (495) 585-82-03</span>
+                    <span class="text-center">Оформить заказ можно на сайте или по телефону +7 (495) 585-82-03</span>
                     <a class="call-title__button my-btn btn-green my-5" data-toggle="modal" data-target="#modal-call"
                         href="#menu_anchor">заказать</a>
                 </div>
@@ -285,6 +285,11 @@
                                                         <span>5. <?= $dishes_first[4]['product_name']?></span>
                                                     </div>
                                                 </div>
+                                                <p class="text-center h4 py-4 text-color-red">Добавь дополнительное
+                                                    блюдо к
+                                                    заказу
+                                                    всего за 200
+                                                    рублей</p>
                                             </div>
                                         </div>
                                     </div>
@@ -384,7 +389,7 @@
                         Просто скажите какую диету прописал вам врач
                         и мы подготовим для вас меню
                     </span>
-                    <span>Оформить заказ можно на сайте или по телефону +7 (495) 585-82-03</span>
+                    <span class="text-center">Оформить заказ можно на сайте или по телефону +7 (495) 585-82-03</span>
                     <a class="call-title__button my-btn btn-green my-5" href="#menu_anchor" data-toggle="modal"
                         data-target="#modal-call">заказать</a>
                 </div>

@@ -156,8 +156,9 @@
     }
     
     .menu-results {
-        margin-top: 1rem;
-        margin-left: 0;
+        /* margin-top: 1rem;
+        margin-left: 0; */
+        margin: 1rem auto;
     }
 
     .menu-cards .menu-cards-title h3 {
