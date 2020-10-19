@@ -19,6 +19,11 @@ if (isset($_GET['product_code']) && !empty($_GET['product_code'])) {
 } else {
     $goaway = 'yes';
 }
+if (isset($_GET['days']) && !empty($_GET['days'])) {
+    $days = $_GET['days'];
+} else {
+    $goaway = 'yes';
+}
 
 ?>
 
@@ -206,6 +211,24 @@ history.pushState('', document.title, window.location.pathname);
 
                 <div class="dropdown-divider"></div>
 
+                <div class="form-row flex-column">
+                    <div class="col md-3">
+                        <div class="form-group">
+                            <span class="py-2">Дополнительно: </span>
+                            <div class="form-check">
+                                <input class="form-check-input-kisel" type="checkbox" value=""
+                                    id="order_input_check_kisel">
+                                <label class="form-check-label-kisel" for="order_input_check_kisel">
+                                    Добавить Ягодный Кисель (+100 руб / день)
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown-divider"></div>
+
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input check" type="checkbox" value="" id="order_input_check" required>
@@ -224,6 +247,9 @@ history.pushState('', document.title, window.location.pathname);
                 <input type="hidden" class="form_order_number" name="form_order_number" value="">
                 <input type="hidden" class="form_order_product_code" name="form_order_product_code"
                     value="<?= $product_code;?>">
+                <input type="hidden" class="form_order_product_days" name="form_order_product_days"
+                    value="<?= $days;?>">
+                <input type="hidden" class="form_order_product_add" name="form_order_product_add" value="">
                 <button class="my-btn btn-green" type="submit">Заказать</button>
             </form>
             <div class="result_ d-none animated fadeIn"></div>

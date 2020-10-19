@@ -158,7 +158,7 @@
                                 <?= $foodset['description'] ?>
                             </div>
                             <div class="card-link align-items-center justify-content-center d-flex w-100 p-4">
-                                <a href="/order.php?order_sum=<?= $foodset['price'] ?>&order=<?= $foodset['name'] ?>&product_code=<?= $foodset['frontpad_api_id'] ?>"
+                                <a href="/order.php?order_sum=<?= $foodset['price'] ?>&order=<?= $foodset['name'] ?>&product_code=<?= $foodset['frontpad_api_id'] ?>&days=<?= $foodset['days']?>"
                                     style="color:#fff" class="my-btn btn-green" type="button"
                                     data-sum="<?= $foodset['price'] ?>">заказать</a>
                             </div>
@@ -265,6 +265,7 @@
                                     <li data-target="#menu-carousel-block" data-slide-to="3"></li>
                                     <li data-target="#menu-carousel-block" data-slide-to="4"></li>
                                     <li data-target="#menu-carousel-block" data-slide-to="5"></li>
+                                    <li data-target="#menu-carousel-block" data-slide-to="6"></li>
                                 </ol>
 
                                 <div class="carousel-inner">
@@ -283,6 +284,7 @@
                                                         <span>3. <?= $dishes_first[2]['product_name']?></span>
                                                         <span>4. <?= $dishes_first[3]['product_name']?></span>
                                                         <span>5. <?= $dishes_first[4]['product_name']?></span>
+                                                        <span>5. <?= $dishes_first[5]['product_name']?></span>
                                                     </div>
                                                 </div>
                                                 <p class="text-center h4 py-4 text-color-red">Добавь дополнительное

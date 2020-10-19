@@ -421,7 +421,19 @@ $(document).ready(function () {
     });
     
     
-    
+    $('.form-check-input-kisel').on('change',function () {
+        let sum = Number($('.form_order_sum').val());
+        let add_sum = Number(($('.form_order_product_days').val() * 100));
+        if($(this).prop('checked')) {
+            $('.form_order_sum').val(add_sum + sum);
+            $('.form-sum_forShow').text((add_sum + sum) + ' руб.');
+            $('.form_order_product_add').val('Дополнительно Кисель');
+        } else {
+            $('.form_order_sum').val(sum - add_sum);
+            $('.form-sum_forShow').text((sum - add_sum) + ' руб.');
+            $('.form_order_product_add').text('');
+        };
+    });
     
     //конец файла
 });
