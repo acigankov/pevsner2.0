@@ -73,10 +73,7 @@ $orderUrl = $orderUrl[0];
     fbq('init', '499479300709526');
     fbq('track', 'PageView');
     </script>
-    <noscript>
-        <img height="1" width="1" src="https://www.facebook.com/tr?id=499479300709526&ev=PageView
-                     &noscript=1" />
-    </noscript>
+
     <!-- End Facebook Pixel Code -->
 
     <?php if($orderUrl === '/order.php'):?>
@@ -89,6 +86,9 @@ $orderUrl = $orderUrl[0];
 </head>
 
 <body>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=499479300709526&ev=PageView&noscript=1" alt="" />
+    </noscript>
     <!--button UP-->
     <div id="button-up" class="animated fadeInRightBig"><i class="fas fa-arrow-up"></i></div>
     <!--конец button UP-->
