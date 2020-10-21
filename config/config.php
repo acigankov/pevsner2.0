@@ -33,5 +33,6 @@ $timer_section = false;
 
 $showWAphone = true;
 $showInstIcon = true;
+$showSectionFaq = true;
 
 ?>

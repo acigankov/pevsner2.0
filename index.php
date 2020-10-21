@@ -366,6 +366,7 @@
         </div>
     </section>
 
+    <?php if($showSectionFaq) : ?>
     <section class="faq" id="faq">
         <div class="container pb-5 bg-color-white w-80">
             <div class="row">
@@ -396,8 +397,7 @@
             </div>
         </div>
     </section>
-
-
+    <?php endif;?>
 
     <section class="call" id="contacts_anchor">
         <div class="container bg-color-white">
