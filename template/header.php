@@ -136,7 +136,7 @@ $orderUrl = $orderUrl[0];
                 </nav>
             </div>
             <div class="row">
-                <a href="https://www.instagram.com/dieta_pevsner.ru/" target="_blank"><img class="img-fluid"
+                <a href="https://www.instagram.com/p/CGmDbQ0B_An/" target="_blank"><img class="img-fluid"
                         src="/img/design/header/banner.jpg" alt=""></a>
                 <!-- <div
                     class="main-banner d-flex w-100 text-color-white align-items-center justify-content-center flex-column">
