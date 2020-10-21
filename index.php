@@ -344,7 +344,7 @@
         <div class="container bg-color-white">
             <div class="row">
                 <div class="section-title">
-                    <h3>Зона Доставки</h2>
+                    <h3>Зона Доставки</h3>
                 </div>
             </div>
             <div class="row align-items-center">
