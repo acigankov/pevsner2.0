@@ -23,6 +23,7 @@ $generateCoupon = 'OFF';
 
 //vars for template
 $tables = getTables();
+$faqs = getFaqs();
 $foodsets = getFoodsets();
 $showMenu = true;
 $fooddays = getFooddays();

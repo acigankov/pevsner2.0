@@ -169,6 +169,13 @@
         font-size: 0.9rem;
     }
     /*sm section menu end*/
+
+
+    /*sm section faq*/
+    .faq .card {
+        max-width: 95%;
+    }
+    /*sm section faq end*/
     
     /*sm section call start*/
 

@@ -931,3 +931,34 @@ footer {
     font-family: 'Nunito-Bold'  , sans-serif;
     transition: linear 0.5s ease;
 }
+
+
+/*accordion faq*/
+
+.faq .card {
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: transparent;
+    background-clip: initial;
+    border: none;
+    border-radius: 0; 
+}
+
+.faq .card-header {
+    background-color: transparent;
+}
+
+
+.faq-title-item {
+    font-size: 1.35rem;
+    color: #606060;
+    background-color: transparent;
+    text-align: left;
+}
+
+.faq .card-body {
+    font-size: 1.2rem;
+    background-color: rgba(0,0,0,.03);
+    margin: 1rem;
+    padding: 1rem;
+}

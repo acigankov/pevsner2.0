@@ -366,6 +366,39 @@
         </div>
     </section>
 
+    <section class="faq" id="faq">
+        <div class="container pb-5 bg-color-white w-80">
+            <div class="row">
+                <div class="section-title">
+                    <h3>FAQ</h3>
+                </div>
+            </div>
+            <div id="accordion">
+                <?php foreach($faqs as $faq) : ?>
+                <div class="card">
+                    <div class="card-header" id="heading-<?= $faq['id']?>">
+                        <h5 class="mb-0">
+                            <button class="btn faq-title-item" data-toggle="collapse"
+                                data-target="#collapse-<?= $faq['id']?>" aria-expanded="true"
+                                aria-controls="collapse-<?= $faq['id']?>">
+                                <?= $faq['title']?>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse-<?= $faq['id']?>" class="collapse" aria-labelledby="heading-<?= $faq['id']?>"
+                        data-parent="#accordion">
+                        <div class="card-body">
+                            <?= $faq['text']?>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+
+
     <section class="call" id="contacts_anchor">
         <div class="container bg-color-white">
             <div class="row">

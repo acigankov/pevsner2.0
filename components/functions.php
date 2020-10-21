@@ -281,6 +281,28 @@ function getTables() {
     
     return false;
 }
+/**
+ * Получить faqs
+ * @params null
+ * @return array
+ */
+
+function getFaqs() {
+    
+    $db = DB::getConnection();
+    
+    $sql = 'SELECT * from faq';
+    $result = $db->prepare($sql); 
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();       
+    $faqs = $result->fetchAll();
+    
+    if($faqs){
+        return $faqs;
+    }
+    
+    return false;
+}
 
 function getDishes($day_id , $table_id) {
     
