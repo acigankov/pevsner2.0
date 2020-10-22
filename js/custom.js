@@ -427,7 +427,21 @@ $(document).ready(function () {
         if($(this).prop('checked')) {
             $('.form_order_sum').val(add_sum + sum);
             $('.form-sum_forShow').text((add_sum + sum) + ' руб.');
-            $('.form_order_product_add').val('Дополнительно Кисель');
+            $('.form_order_kisel_add').val('Кисель');
+        } else {
+            $('.form_order_sum').val(sum - add_sum);
+            $('.form-sum_forShow').text((sum - add_sum) + ' руб.');
+            $('.form_order_kisel_add').text('');
+        };
+    });
+
+    $('.form-check-input-addproduct').on('change',function () {
+        let sum = Number($('.form_order_sum').val());
+        let add_sum = Number(($('.form_order_product_days').val() * 200));
+        if($(this).prop('checked')) {
+            $('.form_order_sum').val(add_sum + sum);
+            $('.form-sum_forShow').text((add_sum + sum) + ' руб.');
+            $('.form_order_product_add').val('Дополнительное Блюдо');
         } else {
             $('.form_order_sum').val(sum - add_sum);
             $('.form-sum_forShow').text((sum - add_sum) + ' руб.');

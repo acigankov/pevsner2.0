@@ -221,7 +221,13 @@ history.pushState('', document.title, window.location.pathname);
                                 <label class="form-check-label-kisel" for="order_input_check_kisel">
                                     Добавить Ягодный Кисель (+100 руб / день)
                                 </label>
-
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input-addproduct" type="checkbox" value=""
+                                    id="order_input_check_addproduct">
+                                <label class="form-check-label-addproduct" for="order_input_check_addproduct">
+                                    Добавить Блюдо (+200 руб / день)
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -249,6 +255,7 @@ history.pushState('', document.title, window.location.pathname);
                     value="<?= $product_code;?>">
                 <input type="hidden" class="form_order_product_days" name="form_order_product_days"
                     value="<?= $days;?>">
+                <input type="hidden" class="form_order_kisel_add" name="form_order_kisel_add" value="">
                 <input type="hidden" class="form_order_product_add" name="form_order_product_add" value="">
                 <button class="my-btn btn-green" type="submit">Заказать</button>
             </form>

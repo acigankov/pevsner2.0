@@ -271,6 +271,11 @@ if (isset($_POST['form_order'])) {
     
     }
     //дополнительно
+    if (isset($_POST['form_order_kisel_add'])) {
+        $add_kisel = $_POST['form_order_kisel_add'];
+    } else {
+        $error_msg = 'Ошибка! данные не переданы! form_order_kisel_add';
+    }
     if (isset($_POST['form_order_product_add'])) {
         $add_product = $_POST['form_order_product_add'];
     } else {
@@ -311,7 +316,8 @@ if (isset($_POST['form_order'])) {
                     . 'Номер Заказа : ' . $order_num . ' <br>' . "\r\n"
                     . 'Способ Оплаты : ' . $payment_type_for_email . ' <br>' . "\r\n"
                     . 'Стол : ' . $selected_table . ' <br>' . "\r\n"
-                    . 'Доп блюдо : ' . $add_product . ' <br>' . "\r\n"
+                    . 'Доп блюдо 1 : ' . $add_kisel . ' <br>' . "\r\n"
+                    . 'Доп блюдо 2 : ' . $add_product . ' <br>' . "\r\n"
                     . 'Когда привезти : ' . $delivery_time . ' <br>' . "\r\n"
                     . 'Купон применен : ' . $has_promo = $has_promo ? 'Да' : 'Нет' . ' <br>' . "\r\n"
                     . 'Комментарий : ' . $comment . ' <br>' . "\r\n";
@@ -325,7 +331,8 @@ if (isset($_POST['form_order'])) {
                 . 'Сумма : ' . $sum . PHP_EOL
                 . 'Заказ : ' . $order_description . PHP_EOL
                 . 'Стол : ' . $selected_table . PHP_EOL
-                . 'Доп блюдо  : ' . $add_product . PHP_EOL
+                . 'Доп блюдо 1 : ' . $add_kisel . PHP_EOL
+                . 'Доп блюдо 2 : ' . $add_product . PHP_EOL
                 . 'Номер Заказа  : ' . $order_num . PHP_EOL
                 . 'Способ Оплаты : ' . $payment_type_for_email .  PHP_EOL
                 . 'Когда привезти: ' . $delivery_time .  PHP_EOL
