@@ -368,6 +368,27 @@
         </div>
     </section>
 
+    <section class="akcii">
+        <div class="container bg-color-white">
+            <div class="row">
+                <div class="section-title">
+                    <h3>Специальные предложения</h3>
+                </div>
+            </div>
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+                    <img src="/img/design/sections/akcii/1.jpg" alt="special_offer"
+                        class="img-fluid akcii__item shadow">
+                </div>
+                <div class="col-md-6">
+                    <img src="/img/design/sections/akcii/2.jpg" alt="special_offer"
+                        class="img-fluid akcii__item shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <?php if($showSectionFaq) : ?>
     <section class="faq" id="faq">
         <div class="container pb-5 bg-color-white w-80">
