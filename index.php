@@ -368,6 +368,7 @@
         </div>
     </section>
 
+    <?php if ($showSectionAkcii) : ?>
     <section class="akcii">
         <div class="container bg-color-white">
             <div class="row">
@@ -376,18 +377,17 @@
                 </div>
             </div>
             <div class="row align-items-center">
-
-                <div class="col-md-6">
-                    <img src="/img/design/sections/akcii/1.jpg" alt="special_offer"
-                        class="img-fluid akcii__item shadow">
+                <?php foreach($akcii as $item) : ?>
+                <div class="col-md-6 p-2">
+                    <a href="#" class="akcii__item shadow" data-id="<?= $item['id']?>">
+                        <img src="<?= $item['image']?>" alt="<?= $item['name']?>" class="img-fluid ">
+                    </a>
                 </div>
-                <div class="col-md-6">
-                    <img src="/img/design/sections/akcii/2.jpg" alt="special_offer"
-                        class="img-fluid akcii__item shadow">
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
+    <?php endif;?>
 
     <?php if($showSectionFaq) : ?>
     <section class="faq" id="faq">

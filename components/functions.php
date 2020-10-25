@@ -281,6 +281,54 @@ function getTables() {
     
     return false;
 }
+
+/**
+ * Получить акции для структуры меню
+ * @params null
+ * @return array
+ */
+function getAkcii() {
+    
+    $db = DB::getConnection();
+    
+    $sql = 'SELECT * from akcii';
+    
+    $result = $db->prepare($sql); 
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();       
+    $akcii = $result->fetchAll();
+    
+    if($akcii){
+        return $akcii;
+    }
+    
+    return false;
+}
+/**
+ * Получить акцию по id
+ * @params null
+ * @return array
+ */
+function getAkciiById($id) {
+    
+    $db = DB::getConnection();
+    
+    $sql = 'SELECT * from akcii
+            WHERE id = :id';
+    $result = $db->prepare($sql); 
+    $result->bindParam(':id', $id, PDO::PARAM_INT);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();       
+    $akcii = $result->fetch();
+    
+    if($akcii){
+        return $akcii;
+    }
+    
+    return false;
+}
+
+
 /**
  * Получить faqs
  * @params null
@@ -390,6 +438,8 @@ function getFooddays() {
     
     return false;
 }
+
+
 /**
  * Получить общие фотки дней
  * @params null

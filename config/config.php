@@ -24,6 +24,7 @@ $generateCoupon = 'OFF';
 //vars for template
 $tables = getTables();
 $faqs = getFaqs();
+$akcii = getAkcii();
 $foodsets = getFoodsets();
 $showMenu = true;
 $fooddays = getFooddays();
@@ -34,5 +35,6 @@ $timer_section = false;
 $showWAphone = true;
 $showInstIcon = true;
 $showSectionFaq = true;
+$showSectionAkcii = true;
 
 ?>

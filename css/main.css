@@ -965,6 +965,41 @@ footer {
 
 /*section akcii*/
 .akcii__item {
+    display: block;
+}
+.akcii__item:hover {
+    opacity: .5;
+}
+
+
+/* akcii modal*/
+
+#modal-akcii .modal-header {
+    border:none;
+    padding: 0.5rem 1rem 0;
+    font-weight: bold;
+}
+
+.akcii-description {
+    font-size: 1.4rem;
+}
+
+.akcii-description ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     
 }
+.akcii-description ul {
+    list-style: none;
+    padding: 1rem;
+    
+}
+.akcii-description a {
+    color: #DD2F7D;
+}
+.akcii-description a:hover {
+    opacity: .5;
+}
+
 /*section akcii end*/

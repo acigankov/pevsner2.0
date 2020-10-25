@@ -80,6 +80,7 @@
 
         <?php include_once 'modal_call.php'; ?>
         <?php include_once 'modal_testimonial.php'; ?>
+        <?php include_once 'modal_akcii.php'; ?>
         <!--modals end-->
 
 
