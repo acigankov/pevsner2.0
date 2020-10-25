@@ -474,7 +474,7 @@ $(document).ready(function () {
                 var result = $.parseJSON(response);
 
                 $('#modal-akcii-name').html(result.name);
-                $('#modal-akcii-img').html(result.img);
+                $('#modal-akcii-img').attr('src', result.img);
                 $('#modal-akcii-description').html(result.description);
 
             },

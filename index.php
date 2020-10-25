@@ -365,6 +365,10 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <img src="/img/design/sections/map/map.jpg" alt="map" class="img-fluid shadow map-img">
+
+            </div>
         </div>
     </section>
 
