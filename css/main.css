@@ -942,9 +942,11 @@ footer {
 /*section akcii*/
 .akcii__item {
     display: block;
+    transition: all .5 ease;
 }
 .akcii__item:hover {
     opacity: .5;
+    transition: all .5 ease;
 }
 
 
