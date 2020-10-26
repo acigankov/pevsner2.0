@@ -285,8 +285,6 @@
                                                         <span>3. <?= $dishes_first[2]['product_name']?></span>
                                                         <span>4. <?= $dishes_first[3]['product_name']?></span>
                                                         <span>5. <?= $dishes_first[4]['product_name']?></span>
-                                                        <span>6. <?= $dishes_first[5]['product_name']?></span>
-                                                        <span>7. <?= $dishes_first[6]['product_name']?></span>
                                                     </div>
                                                 </div>
                                                 <p class="text-center h4 py-4 text-color-red">Добавь дополнительное
@@ -310,7 +308,9 @@
                                                 <h3 class="dish-name"><?= $dish['product_name']?></h3>
                                                 <span
                                                     class="dish-description">(<?= $dish['product_description']?>)</span>
+                                                <?php if($dish['product_weight']) :?>
                                                 <span class="dish-weight">(<?= $dish['product_weight']?> гр.)</span>
+                                                <?php endif?>
                                             </div>
                                         </div>
                                     </div>

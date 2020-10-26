@@ -58,7 +58,7 @@ function getMenu(table_id , day_id = 1) {
                 food_images.eq(i).attr('src', result[i].product_image);
                 food_names.eq(i).text(result[i].product_name);
                 food_descriptions.eq(i).text('(' + result[i].product_description + ')');
-                food_weight.eq(i).text('(' + result[i].product_weight + ' гр.)');
+                food_weight.eq(i).text('(' + result[i].product_weight + ' гр.)' );
             }
         },
         error: function (response, textStatus, jqXHR) { // Если данные не отправлены
