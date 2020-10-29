@@ -264,8 +264,8 @@
 /*extra large */
 @media (min-width: 1200px)  {
     /*звонилка*/    
-    .pulse {
+    /* .pulse {
         display: none;
-    }   
+    }    */
     /*звонилка*/  
 }

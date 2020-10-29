@@ -51,15 +51,15 @@ $(document).ready(function () {
     });
 
     //тултип у звонилки
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
+    // $(function () {
+    //     $('[data-toggle="tooltip"]').tooltip();
+    // });
 
-    if ($(window).width() >= 768) {
-        $('.pulse').mouseover(function () {
-            $(this).tooltip('show');
-        });
-    }
+    // if ($(window).width() >= 768) {
+    //     $('.pulse').mouseover(function () {
+    //         $(this).tooltip('show');
+    //     });
+    // }
     
 
     //ЗАКАЗ

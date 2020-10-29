@@ -93,11 +93,7 @@ $orderUrl = $orderUrl[0];
     <div id="button-up" class="animated fadeInRightBig"><i class="fas fa-arrow-up"></i></div>
     <!--конец button UP-->
     <!--button CALL-->
-    <div class="pulse d-none d-md-block" data-toggle="modal" data-target="#modal-call" data-placement="left"
-        title="Хотите, мы Вам перезвоним?">
-        <i class="fa fa-phone" aria-hidden="true"></i>
-    </div>
-    <a class="pulse d-block d-md-none" href="tel:+74955858203"><i class="fa fa-phone" aria-hidden="true"></i></a>
+    <a class="pulse" href="https://wa.me/79055576669" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <!--конец button CALL-->
     <header>
         <div class="container">
