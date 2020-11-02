@@ -26,7 +26,7 @@
                                     zakaz@pevsner.ru</a>
                                 <span
                                     class="footer-content-info__hours align-items-center d-flex justify-content-center"><i
-                                        class="fas fa-business-time"></i> &nbsp; 09:00 - 21:00</span>
+                                        class="fas fa-business-time"></i> &nbsp; 07:30 - 19:30</span>
                             </div>
                             <div
                                 class="footer-content-info__contact d-flex text-left align-items-center justify-content-around py-2">
