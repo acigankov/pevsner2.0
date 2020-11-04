@@ -361,6 +361,10 @@ function getDishes($day_id , $table_id) {
                 p.description AS product_description,
                 p.image AS product_image,
                 p.weight AS product_weight,
+                p.calories AS product_calories,
+                p.proteins AS product_proteins,
+                p.fats AS product_fats,
+                p.carbohydrates AS product_carbohydrates,
                 ft.name AS food_time,
                 t.description as `table_description`,
                 fdi.image as table_image

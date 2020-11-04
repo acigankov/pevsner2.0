@@ -285,12 +285,35 @@
                                                         <span>4. <?= $dishes_first[3]['product_name']?></span>
                                                         <span>5. <?= $dishes_first[4]['product_name']?></span>
                                                     </div>
+                                                    <div class="menu-results-res kbgu">
+
+                                                        <span class="calories-text kbgu-calories-all">
+                                                            <?= $kbgu['calories']; ?>
+                                                            Ккал
+                                                        </span>
+
+                                                        <div class="menu-results-descr">
+                                                            <ul class="countdown">
+                                                                <li>
+                                                                    <span
+                                                                        class="kbgu-proteins-all"><?= $kbgu['proteins']; ?></span>
+                                                                    <div>Белки</div>
+                                                                </li>
+                                                                <li>
+                                                                    <span
+                                                                        class="kbgu-fats-all"><?= $kbgu['fats']; ?></span>
+                                                                    <div>Жиры</div>
+                                                                </li>
+                                                                <li>
+                                                                    <span
+                                                                        class="kbgu-carbohydrates-all"><?= $kbgu['carbohydrates']; ?></span>
+                                                                    <div>Углеводы</div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <p class="text-center h4 py-4 text-color-red">Добавь дополнительное
-                                                    блюдо к
-                                                    заказу
-                                                    всего за 200
-                                                    рублей</p>
+
                                             </div>
                                         </div>
                                     </div>
@@ -303,13 +326,50 @@
                                                 <div class="carousel-item-img__badge"><?= $dish['food_time']?></div>
                                                 <img src="<?= $dish['product_image']?>" class="img-fluid" alt="image">
                                             </div>
-                                            <div class="carousel-item-text">
-                                                <h3 class="dish-name"><?= $dish['product_name']?></h3>
-                                                <span
-                                                    class="dish-description">(<?= $dish['product_description']?>)</span>
-                                                <?php if($dish['product_weight']) :?>
-                                                <span class="dish-weight">(<?= $dish['product_weight']?> гр.)</span>
-                                                <?php endif?>
+
+
+                                            <div class="menu-results kbgu">
+                                                <div class="carousel-item-text">
+                                                    <h3 class="dish-name"><?= $dish['product_name']?></h3>
+                                                    <span
+                                                        class="dish-description">(<?= $dish['product_description']?>)</span>
+                                                    <?php if($dish['product_weight']) :?>
+                                                    <span class="dish-weight">(<?= $dish['product_weight']?> гр.)</span>
+                                                    <?php endif?>
+                                                </div>
+                                                <div class="menu-results-res">
+                                                    <span class="kbgu-calories-item">
+                                                        <?php if($dish['product_calories']) : ?>
+                                                        <?= $dish['product_calories']; ?>
+                                                        Ккал
+                                                        <?php else : ?>
+                                                        Уточняйте у менеджера
+                                                        <?php endif ?>
+
+                                                    </span>
+
+
+
+                                                    <div class="menu-results-descr">
+                                                        <ul class="countdown">
+                                                            <li>
+                                                                <span
+                                                                    class="kbgu-proteins-item"><?= $dish['product_proteins']; ?></span>
+                                                                <div>Белки</div>
+                                                            </li>
+                                                            <li>
+                                                                <span
+                                                                    class="kbgu-fats-item"><?= $dish['product_fats']; ?></span>
+                                                                <div>Жиры</div>
+                                                            </li>
+                                                            <li>
+                                                                <span
+                                                                    class="kbgu-carbohydrates-item"><?= $dish['product_carbohydrates']; ?></span>
+                                                                <div>Углеводы</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

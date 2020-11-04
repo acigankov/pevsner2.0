@@ -37,4 +37,34 @@ $showInstIcon = true;
 $showSectionFaq = true;
 $showSectionAkcii = true;
 
+//КБЖУ ух костыль) 
+
+if($dishes_first) {
+
+    $calories = 0;    
+    $proteins = 0;    
+    $fats = 0;    
+    $carbohydrates = 0;    
+
+    foreach($dishes_first as $dish_list) {
+        $calories+= $dish_list['product_calories'];
+    }
+    foreach($dishes_first as $dish_list) {
+        $proteins+= $dish_list['product_proteins'];
+    }
+    foreach($dishes_first as $dish_list) {
+        $fats+= $dish_list['product_fats'];
+    }
+    foreach($dishes_first as $dish_list) {
+        $carbohydrates+= $dish_list['product_carbohydrates'];
+    }
+
+    $kbgu = [
+        'calories'      => $calories,
+        'proteins'      => $proteins,
+        'fats'          => $fats,
+        'carbohydrates' => $carbohydrates
+    ];
+}
+
 ?>

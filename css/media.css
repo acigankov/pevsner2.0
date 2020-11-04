@@ -115,7 +115,7 @@
     .menu-content .carousel .carousel-item-text {
         flex-basis: 100%;
         padding-top: 1rem;
-        min-height: 210px;
+        min-height: 125px;
     }
 
     .menu-content .carousel .carousel-item-text>h3 {

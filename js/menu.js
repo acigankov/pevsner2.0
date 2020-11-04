@@ -40,6 +40,16 @@ function getMenu(table_id , day_id = 1) {
     var food_descriptions = $('#menu-carousel-block .carousel-dishes .dish-description');
     var food_weight = $('#menu-carousel-block .carousel-dishes .dish-weight');
 
+    var calories_item = $('#menu-carousel-block .carousel-dishes .kbgu-calories-item');
+    var proteins_item = $('#menu-carousel-block .carousel-dishes .kbgu-proteins-item');
+    var fats_item = $('#menu-carousel-block .carousel-dishes .kbgu-fats-item');
+    var carbohydrates_item = $('#menu-carousel-block .carousel-dishes .kbgu-calocarbohydratesries-item');
+
+    var calories_all = 0;
+    var proteins_all = 0;
+    var fats_all = 0;
+    var carbohydrates_all = 0;
+
     $.ajax({
         url: 'libs/ajaxmenu.php', //url страницы 
         cache: false, // выключили кэш
@@ -54,12 +64,34 @@ function getMenu(table_id , day_id = 1) {
             $('#table-image').attr('src', result[0].table_image);
             $('#table-description').text(result[0].table_description);
             for (var i = 0; i < result.length; i++) {
+
+                calories_all+=result[i].product_calories;
+                proteins_all+=result[i].product_proteins;
+                fats_all+=result[i].product_fats;
+                console.log(fats_all);
+                carbohydrates_all+=result[i].product_carbohydrates;
+
                 dishes_names_all.eq(i).text((i + 1) + '. ' + result[i].product_name);
+
+                if(result[i].product_calories) {
+                    calories_item.eq(i).text(result[i].product_calories + ' Ккал') ;
+                } else {calories_item.eq(i).text('Уточняйте у менеджера') ;} 
+                proteins_item.eq(i).text(result[i].product_proteins) ;
+                fats_item.eq(i).text(result[i].product_fats) ;
+                carbohydrates_item.eq(i).text(result[i].product_carbohydrates) ;
+
                 food_images.eq(i).attr('src', result[i].product_image);
                 food_names.eq(i).text(result[i].product_name);
                 food_descriptions.eq(i).text('(' + result[i].product_description + ')');
                 food_weight.eq(i).text('(' + result[i].product_weight + ' гр.)' );
             }
+            
+            $('.kbgu-calories-all').text(calories_all.toFixed(2) + ' Ккал');
+            $('.kbgu-proteins-all').text(proteins_all.toFixed(2));
+            $('.kbgu-fats-all').text(fats_all.toFixed(2));
+            $('.kbgu-carbohydrates-all').text(carbohydrates_all.toFixed(2));
+            
+
         },
         error: function (response, textStatus, jqXHR) { // Если данные не отправлены
             $('#pills-tabContent').text('данные не получены, попробуйте позднее');
