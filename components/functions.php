@@ -269,7 +269,7 @@ function getTables() {
     
     $db = DB::getConnection();
     
-    $sql = 'SELECT * from tables';
+    $sql = 'SELECT * from tables WHERE active = true';
     $result = $db->prepare($sql); 
     $result->setFetchMode(PDO::FETCH_ASSOC);
     $result->execute();       
