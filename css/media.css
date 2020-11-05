@@ -73,6 +73,24 @@
     
     /*sm section how end*/
     
+    /* sm woman start */
+    .woman-description {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        margin: 0 auto ;
+    }
+    .woman-description::after,.woman-description::before  {
+        display: none;
+    }
+
+    .woman-image {
+        padding-top: 1rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* sm woman end */
+
     /*sm testimonial start*/
 
     .testimonial-slide {
@@ -242,11 +260,26 @@
     }
     
     /*md testimonial end*/
+
+    /* md woman start */
+    .woman-description {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        margin-left: 10%;
+    }
+    
+    .woman-image {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+
+    /* md woman end */
     
 }
 
 /*lg large*/
-@media (min-width:769px) and (max-width: 992px)  {
+@media (min-width:769px) and (max-width: 1199px)  {
 
     .container {
         max-width: 100%;
@@ -258,6 +291,12 @@
     }
     
     /*sm testimonial end*/
+
+    /* md woman start */
+    .woman-description {
+        padding: 0.5rem;
+    }
+    /* md woman end */
 
 }
 

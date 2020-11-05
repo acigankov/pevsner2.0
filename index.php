@@ -120,6 +120,41 @@
                 </div>
 
             </div>
+
+            <div class="woman mt-5">
+                <div class="row">
+                    <div class="col-md-6 align-items-center d-flex">
+                        <div class="woman-description">
+                            <p>
+                                Я изучаю взаимосвязь питания и здоровья более пяти лет и могу с уверенностью сказать,
+                                что
+                                многие проблемы со здоровьем, такие как гастрит, панкреатит и т.д. можно решить с
+                                помощью диетотерапии. Поэтому с удовольствием решила присоединиться к проекту
+                                Pevsner.ru.
+                            </p>
+                            <p>Жители столицы теперь могут вкусно и разнообразно питаться, не тратя время на готоку.</p>
+                            <p>если Вам нужна индивидуальная консультация по питанию или услуга food - коучинг, я всегда
+                                открыта для общения в Instagram.
+                            </p>
+                            <a href="https://www.instagram.com/dasha_nutritionist/"
+                                target="_blank">@dasha_nutritionist&nbsp;<i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="woman-image">
+                            <img class="img-fluid shadow" src="/img/design/sections/woman/woman.jpg" alt="woman">
+                        </div>
+                        <div class="woman-title text-center py-3 ">
+                            <h3>Будыко Дарья Николаевна</h3>
+                            <span>Нутрициолог, Коуч по питанию</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </section>
 

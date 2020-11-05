@@ -388,9 +388,71 @@ a,a:focus,a:link,a:visited {
     color:#00B670;
     left: -35px;
 }
-
-
 /*section how end*/
+
+/* section woman start */
+
+.woman-description {
+    margin-left: 20% ;
+    border: 3px solid #00B670;
+    border-radius: 1rem;
+    padding: 2rem 3rem;  
+    color: #606060;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+}
+.woman-description::before{
+    content: ' ';
+    border-color: transparent transparent #00B670;
+    border-style: solid;
+    border-width: 25px;
+    position: absolute;
+    top: 58px;
+    right: -50px;
+    transform: rotate(90deg);
+}
+.woman-description:after {
+    content: ' ';
+    border-color: transparent transparent #FFF;
+    border-style: solid;
+    border-width: 20px;
+    position: absolute;
+    right: -40px;
+    top: 63px;
+    transform: rotate(90deg);
+}
+
+
+.woman-description a {
+    color: #00B670;
+    font-size: 1.3rem;
+}
+
+
+.woman-image {
+    width: 70%;
+    margin: 0 auto;
+
+}
+.woman-image img{
+    border-radius: 50%;
+}
+
+.woman-title h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #606060 ;
+}
+
+.woman-title span {
+    font-size: 1.2rem;
+    color: #00B670;
+    font-weight: 500;
+}
+
+
+/* section woman end */
 
 /*section menu start*/
 
