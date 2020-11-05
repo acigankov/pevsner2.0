@@ -123,6 +123,11 @@
 
             <div class="woman mt-5">
                 <div class="row">
+                    <div class="section-title">
+                        <h3>Мнение Эксперта</h3>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-6 align-items-center d-flex">
                         <div class="woman-description">
                             <p>
@@ -245,7 +250,6 @@
         </div>
     </section>
 
-
     <?php if ($showMenu) : ?>
     <section class="menu" id="checkout_anchor">
         <div class="container bg-color-white">
@@ -254,7 +258,7 @@
                     <img src="img/design/sections/menu/heart.png" alt="image">
                 </div>
                 <div class="section-title">
-                    <h3>меню на завтра</h3>
+                    <h3>меню</h3>
                 </div>
             </div>
             <div class="row">
