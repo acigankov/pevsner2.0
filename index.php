@@ -1,18 +1,7 @@
 <?php include_once './template/header.php'; ?>
 
 <main>
-    <section class="banner" id="banner">
-        <div class="container bg-color-white">
-            <div class="banner__img d-flex align-items-center justify-content-center w-100 py-3">
-                <a class="anchor__link" href="#checkout_anchor">
-                    <img src="img/design/sections/banner/banner-big.png" alt="banner"
-                        class="img-fluid banner__img_big d-none d-md-inline">
-                    <img src="img/design/sections/banner/banner-mob.png" alt="banner"
-                        class="img-fluid banner__img_mob d-md-none">
-                </a>
-            </div>
-        </div>
-    </section>
+
 
     <?php if ($timer_section) : ?>
     <section class="timer-section" id="timer-section">
@@ -207,6 +196,19 @@
                 </div>
                 <?php endforeach ?>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="banner" id="banner">
+        <div class="container bg-color-white">
+            <div class="banner__img d-flex align-items-center justify-content-center w-100 py-3">
+                <a class="anchor__link" href="#checkout_anchor">
+                    <img src="img/design/sections/banner/banner-big.png" alt="banner"
+                        class="img-fluid banner__img_big d-none d-md-inline">
+                    <img src="img/design/sections/banner/banner-mob.png" alt="banner"
+                        class="img-fluid banner__img_mob d-md-none">
+                </a>
             </div>
         </div>
     </section>
