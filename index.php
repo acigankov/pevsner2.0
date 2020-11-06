@@ -376,7 +376,7 @@
                                                     <span
                                                         class="dish-description">(<?= $dish['product_description']?>)</span>
                                                     <?php if($dish['product_weight']) :?>
-                                                    <span class="dish-weight">(<?= $dish['product_weight']?> гр.)</span>
+                                                    <!-- <span class="dish-weight">(<? //$dish['product_weight']?> гр.)</span> -->
                                                     <?php endif?>
                                                 </div>
                                                 <div class="menu-results-res">

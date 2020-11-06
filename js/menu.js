@@ -38,7 +38,7 @@ function getMenu(table_id , day_id = 1) {
     var food_images = $('#menu-carousel-block .carousel-dishes .carousel-item-img img');
     var food_names = $('#menu-carousel-block .carousel-dishes .dish-name');
     var food_descriptions = $('#menu-carousel-block .carousel-dishes .dish-description');
-    var food_weight = $('#menu-carousel-block .carousel-dishes .dish-weight');
+    //var food_weight = $('#menu-carousel-block .carousel-dishes .dish-weight');
 
     var calories_item = $('#menu-carousel-block .carousel-dishes .kbgu-calories-item');
     var proteins_item = $('#menu-carousel-block .carousel-dishes .kbgu-proteins-item');
@@ -83,7 +83,7 @@ function getMenu(table_id , day_id = 1) {
                 food_images.eq(i).attr('src', result[i].product_image);
                 food_names.eq(i).text(result[i].product_name);
                 food_descriptions.eq(i).text('(' + result[i].product_description + ')');
-                food_weight.eq(i).text('(' + result[i].product_weight + ' гр.)' );
+                //food_weight.eq(i).text('(' + result[i].product_weight + ' гр.)' );
             }
             
             $('.kbgu-calories-all').text(calories_all.toFixed(2) + ' Ккал');
