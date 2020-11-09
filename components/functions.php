@@ -352,11 +352,40 @@ function getFaqs() {
     return false;
 }
 
-function getDishes($day_id , $table_id) {
+function getCurrentWeek() {
     
     $db = DB::getConnection();
     
-    $sql = 'SELECT
+    $sql = 'SELECT week_num from current_week';
+    $result = $db->prepare($sql); 
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();       
+    $week_num = $result->fetchColumn();
+    
+    if($week_num){
+        return $week_num;
+    }
+    
+    return false;
+}
+
+function getDishes($day_id , $table_id) {
+    
+    $db = DB::getConnection();
+
+    $current_week = getCurrentWeek();
+
+    if ($day_id < date('N')) {
+        if ($current_week < 2) {
+            $week_num = $current_week + 1; 
+        } else {
+            $week_num = 1;
+        }
+    } else {
+        $week_num = $current_week;
+    }
+    
+    $sql = "SELECT
                 p.name AS product_name,
                 p.description AS product_description,
                 p.image AS product_image,
@@ -377,13 +406,14 @@ function getDishes($day_id , $table_id) {
             LEFT JOIN products AS p ON p.id = fv.product_id 
             LEFT JOIN food_days_images AS fdi on fdi.table_id = t.id AND fdi.day_id = fv.day_id AND fdi.week_num = fw.week_num
 
-            WHERE fv.day_id = :day_id AND fv.table_id = :table_id AND fv.week_num in (SELECT week_num from current_week)
+            WHERE fv.day_id = :day_id AND fv.table_id = :table_id AND fv.week_num = :week_num 
 
-            ORDER BY ft.name ASC';
+            ORDER BY ft.name ASC";
     
     $result = $db->prepare($sql); 
     $result->bindParam(':day_id', $day_id, PDO::PARAM_INT);
     $result->bindParam(':table_id', $table_id, PDO::PARAM_INT);
+    $result->bindParam(':week_num', $week_num, PDO::PARAM_INT);
     $result->setFetchMode(PDO::FETCH_ASSOC);
     $result->execute();       
     $dishes = $result->fetchAll();

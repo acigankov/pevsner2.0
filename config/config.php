@@ -32,6 +32,7 @@ $dishes_first = getDishes(1, 1);
 $testimonials = getTestimonials();
 $timer_section = false;
 
+
 $showWAphone = true;
 $showInstIcon = true;
 $showSectionFaq = true;
