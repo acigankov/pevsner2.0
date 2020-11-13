@@ -5,7 +5,7 @@ include_once '../config/config.php';
 //Сначала готовим поля для вставки в запрос. Нужен csv с полями $name , $image, $week_num, $table_id, $day_id
 //Запрос 
 //INSERT INTO `food_days_images`( `name`, `image`, `week_num`, `table_id`, `day_id`) 
-//VALUES  (-строки полученные после обработки ниже-)
+//VALUES  ( - строки полученные после обработки ниже - )
 
 $row = 1;
 if (($handle = fopen("tables_w3.csv", "r")) !== FALSE) {
