@@ -777,7 +777,9 @@ a,a:focus,a:link,a:visited {
 
 .testimonial-slide__text {
     font-size: 1.2rem;
-    
+}
+.testimonial-slide img{
+    max-height: 410px;
 }
 
 .testimonials a .carousel-control-prev-icon {
