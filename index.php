@@ -182,14 +182,22 @@
                 </div>
             </div>
             <div class="row">
-                <div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
+                <div id="carousel-testimonials" class="carousel slide w-100" data-ride="carousel">
                     <div class="carousel-inner">
                         <?php foreach ($testimonials as $key => $t) : ?>
                         <div class="carousel-item <?php if ($key == 0) {echo 'active';}?>">
-                            <div class="testimonial-slide">
+                            <div class="testimonial-slide d-flex flex-column">
+
                                 <h3><?= $t['author'] ?></h3>
-                                <span
-                                    class="testimonial-slide__date py-2"><?= date('d.m.Y', strtotime($t['date_add'])) ?></span>
+                                <span class="testimonial-slide__date py-2">
+                                    <?= date('d.m.Y', strtotime($t['date_add'])) ?>
+                                </span>
+
+                                <?php if($t['image']) : ?>
+                                <a href="<?= $t['url'] ?>" target="_blank">
+                                    <img src="<?= $t['image'] ?>" alt="" class="img-fluid shadow">
+                                </a>
+                                <?php endif; ?>
                                 <p class="testimonial-slide__text py-3"><?= $t['text'] ?></p>
                             </div>
                         </div>

@@ -97,7 +97,7 @@ if (isset($_POST['product_name']) && (!empty($_POST['product_name'])) && ($_FILE
     
     //;
     $file_name = strtolower(str_replace(" ", "_", rus2translit(basename($name))));
-    $uploaddir = ROOT  . '/img/design/sections/menu/products/';
+    $uploaddir = ROOT  . '/test/uploads/';
     //$uploadfile = $uploaddir . basename($_FILES['product_image']['name']);
     $uploadfile = $uploaddir . $file_name . '.jpg';
 
@@ -133,94 +133,104 @@ if (isset($_POST['product_name']) && (!empty($_POST['product_name'])) && ($_FILE
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-        <style>
-            .wrapper {
-                margin: 0 auto;
-                margin-top: 100px;
-                max-width: 600px;
-            }
-            .form-row {
-                display: flex;
-                align-items: center;
-                padding: 20px;
-            }
-            input[type="text"] {
-                padding: 5px;
-                width: 100%;
-            }
-            label {
-                display: block;
-                margin-right: 10px;
-            }
-            .table {
-                margin: 30px auto;
-                width: 100%;
-                text-align: center;
-            }
-            td , th {
-                padding: 10px;
-            }
-            h2 {
-                text-align: center;
-            }
-        </style>
-        
-    </head>
-    <body>
-        <div class="wrapper">
-            <h2>Добавить блюдо</h2>
-            <form id="myForm" enctype="multipart/form-data" action="#" method="post" >
-                <div class="form-row">
-                    <label for="product_name">Название блюда: </label>
-                    <input type="text" name="product_name" id="product_name" placeholder="название блюда">
-                </div>
 
-                <div class="form-row">
-                    <label for="product_image">картинка блюда: </label>
-                    <input type="file" name="product_image" id="product_image" placeholder="картинка блюда">
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .wrapper {
+        margin: 0 auto;
+        margin-top: 100px;
+        max-width: 600px;
+    }
 
-                <input type="submit" value="загрузить">
-                <input type="reset" value="Очистить" style="background: red">
-            </form>
-            <hr>
-        </div>
-        <?php $products = getProducts(); ?>
-        <h2>Товары в базе ( <?= count($products)?> ) </h2>
-        <div class="table">
-            <center>
-                <table border = "1" cellspacing="0">
-                    <tbody>
+    .form-row {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    input[type="text"] {
+        padding: 5px;
+        width: 100%;
+    }
+
+    label {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .table {
+        margin: 30px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    td,
+    th {
+        padding: 10px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Добавить блюдо</h2>
+        <form id="myForm" enctype="multipart/form-data" action="#" method="post">
+            <div class="form-row">
+                <label for="product_name">Название блюда: </label>
+                <input type="text" name="product_name" id="product_name" placeholder="название блюда">
+            </div>
+
+            <div class="form-row">
+                <label for="product_image">картинка блюда: </label>
+                <input type="file" name="product_image" id="product_image" placeholder="картинка блюда">
+            </div>
+
+            <input type="submit" value="загрузить">
+            <input type="reset" value="Очистить" style="background: red">
+        </form>
+        <hr>
+    </div>
+    <?php $products = getProducts(); ?>
+    <h2>Товары в базе ( <?= count($products)?> ) </h2>
+    <div class="table">
+        <center>
+            <table border="1" cellspacing="0">
+                <tbody>
                     <th>id</th>
                     <th>name</th>
                     <th>description</th>
                     <th>image_path</th>
                     <th>image</th>
                     <?php foreach ($products as $product): ?>
-                        <tr>
-                            <td><?= $product['id'] ?></td>
-                            <td><?= $product['name'] ?></td>
-                            <td><?= $product['description'] ?></td>
-                            <td><?= $product['image'] ?></td>
-                            <td><img src="../<?= $product['image'] ?>" alt="" style="max-height: 60px"></td>
-                        </tr>
+                    <tr>
+                        <td><?= $product['id'] ?></td>
+                        <td><?= $product['name'] ?></td>
+                        <td><?= $product['description'] ?></td>
+                        <td><?= $product['image'] ?></td>
+                        <td><img src="../<?= $product['image'] ?>" alt="" style="max-height: 60px"></td>
+                    </tr>
                     <?php endforeach ?>
-                    </tbody>
-                </table>
-                
-                <select name="" id="">
-                    <?php foreach ($products as $product): ?>
-                    <option value="<?= $product['id'] ?>"><?= $product['name'] ?></option>
-                    <?php endforeach ?>
-                </select>
-            </center>
-        </div>
+                </tbody>
+            </table>
 
-        <script>
-                    document.getElementById("myForm").reset();
-        </script>
-    </body>
+            <select name="" id="">
+                <?php foreach ($products as $product): ?>
+                <option value="<?= $product['id'] ?>"><?= $product['name'] ?></option>
+                <?php endforeach ?>
+            </select>
+        </center>
+    </div>
+
+    <script>
+    document.getElementById("myForm").reset();
+    </script>
+</body>
+
 </html>
