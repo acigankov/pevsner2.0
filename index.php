@@ -147,9 +147,11 @@
                                 <?= $foodset['description'] ?>
                             </div>
                             <div class="card-link align-items-center justify-content-center d-flex w-100 p-4">
+                                <?php if($showOrderButton) : ?>
                                 <a href="/order.php?order_sum=<?= $foodset['price'] ?>&order=<?= $foodset['name'] ?>&product_code=<?= $foodset['frontpad_api_id'] ?>&days=<?= $foodset['days']?>"
                                     style="color:#fff" class="my-btn btn-green" type="button"
-                                    data-sum="<?= $foodset['price'] ?>">заказать</a>
+                                    data-sum="<?= $foodset['price'] ?>" aria-disabled="true">заказать</a>
+                                <?php endif ?>
                             </div>
                         </div>
                     </div>

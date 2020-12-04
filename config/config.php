@@ -37,6 +37,7 @@ $showWAphone = true;
 $showInstIcon = true;
 $showSectionFaq = true;
 $showSectionAkcii = true;
+$showOrderButton = false;
 
 //КБЖУ ух костыль) 
 
