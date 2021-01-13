@@ -132,7 +132,7 @@
             <div class="menu-cards row">
 
                 <?php foreach ($foodsets as $foodset) : ?>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-4">
                     <div class="menu-cards-content__item card shadow">
                         <div class="card-body">
                             <div class="card-title"><?= $foodset['name'] ?></div>

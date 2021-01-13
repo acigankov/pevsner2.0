@@ -435,6 +435,7 @@ function getFoodsets() {
     $db = DB::getConnection();
     
     $sql = 'SELECT * from foodsets '
+            . ' WHERE active = 1 '
             . 'ORDER BY price desc';
     
     $result = $db->prepare($sql); 
