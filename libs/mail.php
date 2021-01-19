@@ -432,7 +432,7 @@ if (isset($_POST['form_order'])) {
 </html>
 ';
 
-                mail($to, $subject, $message, $headers, '-f zakaz@pevsner.ru');
+                //mail($to, $subject, $message, $headers, '-f zakaz@pevsner.ru');
 
 
                 //если оплата картой даем ссылку на оплату
