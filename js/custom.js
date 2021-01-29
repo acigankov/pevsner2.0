@@ -287,8 +287,8 @@ $(document).ready(function () {
                     $('.result_button').removeClass('d-none').addClass('d-flex');
                     // $('#btn-yk-url').attr('href', result.url);
                 }
-                //$('.result_').text('Заказ #' + result.order_num + ' принят');
-                $('.result_').text('К сожалению, в настоящее время приём заказов приостановлен. Менеджер свяжется с Вами, как только мы возобновим доставку');
+                $('.result_').text('Заказ #' + result.order_num + ' принят');
+                //$('.result_').text('К сожалению, в настоящее время приём заказов приостановлен. Менеджер свяжется с Вами, как только мы возобновим доставку');
                 $('#form-order button[type=submit]').removeAttr('disabled').text('Заказать');
                 
             },
