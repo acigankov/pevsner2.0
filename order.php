@@ -215,13 +215,13 @@ history.pushState('', document.title, window.location.pathname);
                     <div class="col md-3">
                         <div class="form-group">
                             <span class="py-2">Дополнительно: </span>
-                            <div class="form-check">
+                            <!-- <div class="form-check">
                                 <input class="form-check-input-kisel" type="checkbox" value=""
                                     id="order_input_check_kisel">
                                 <label class="form-check-label-kisel" for="order_input_check_kisel">
                                     Добавить Ягодный Кисель (+100 руб / день)
                                 </label>
-                            </div>
+                            </div> -->
                             <div class="form-check">
                                 <input class="form-check-input-addproduct" type="checkbox" value=""
                                     id="order_input_check_addproduct">
