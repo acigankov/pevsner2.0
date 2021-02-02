@@ -8,7 +8,7 @@
                             <a href="tel:+74955858203"><span><i class="fas fa-phone"></i></span> +7 (495) 585-8203</a>
                         </div>
                         <div class="cr_cards-img">
-                            <span>Оплата банковскими картами осуществляется через АО «АЛЬФА-БАНК».К оплате принимаются
+                            <span>Оплата банковскими картами осуществляется через АО «АЛЬФА-БАНК». К оплате принимаются
                                 карты VISA, MasterCard, МИР.</span>
                             <!-- <img src="img/design/sections/footer/visa.png" alt="Мы принимаем Visa" class="img-fluid">
                             <img src="img/design/sections/footer/mastercard.png" alt="Мы принимаем MasterCard" class="img-fluid"> -->
@@ -26,7 +26,7 @@
                                     zakaz@pevsner.ru</a>
                                 <span
                                     class="footer-content-info__hours align-items-center d-flex justify-content-center"><i
-                                        class="fas fa-business-time"></i> &nbsp; 07:30 - 19:30</span>
+                                        class="fas fa-business-time"></i> &nbsp; 08:00 - 23:00</span>
                             </div>
                             <div
                                 class="footer-content-info__contact d-flex text-left align-items-center justify-content-around py-2">
@@ -67,7 +67,7 @@
                                 <a href="../oferta.php" title="Публичная Оферта" target="_blank">Оферта</a> |
                                 <a href="../payment-rules.php" title="Правила оплаты" target="_blank">Правила оплаты</a>
                             </p>
-                            <p>© 2019 Pevsner.ru — доставка еды для диетического питания
+                            <p>© <?= date('Y')?> Pevsner.ru — доставка еды для диетического питания
                             </p>
                         </div>
                     </div>

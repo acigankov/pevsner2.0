@@ -110,8 +110,8 @@ $orderUrl = $orderUrl[0];
                                 target="_blank">Instagram</a></span>
                         <a href="tel:+74955858203" class="d-none d-sm-flex"><span><i
                                     class="fas fa-phone"></i></span>&nbsp; +7 (495) 585-8203</a>
-                        <span class="align-items-center d-flex"><i class="fas fa-business-time"></i> &nbsp; 07:30 -
-                            19:30</span>
+                        <span class="align-items-center d-flex"><i class="fas fa-business-time"></i> &nbsp; 08:00 -
+                            23:00</span>
                         <!--<button class="my-btn btn-green">перезвоните мне</button>-->
                     </div>
                     <?php if($orderUrl === '/') :?>
