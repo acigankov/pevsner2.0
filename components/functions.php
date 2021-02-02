@@ -291,7 +291,7 @@ function getAkcii() {
     
     $db = DB::getConnection();
     
-    $sql = 'SELECT * from akcii';
+    $sql = 'SELECT * from akcii WHERE active = 1';
     
     $result = $db->prepare($sql); 
     $result->setFetchMode(PDO::FETCH_ASSOC);
