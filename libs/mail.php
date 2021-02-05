@@ -295,7 +295,7 @@ if (isset($_POST['form_order'])) {
                     $payment_api_code = '1';
                     break;
                 case 2 :
-                    $payment_type_for_email = 'картой';
+                    $payment_type_for_email = 'картой на сайте';
                     $payment_api_code = '2';
                     break;
                 case 3 :
