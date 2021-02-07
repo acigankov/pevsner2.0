@@ -68,7 +68,7 @@ function getMenu(table_id , day_id = 1) {
                 calories_all+=result[i].product_calories;
                 proteins_all+=result[i].product_proteins;
                 fats_all+=result[i].product_fats;
-                console.log(fats_all);
+                //console.log(fats_all);
                 carbohydrates_all+=result[i].product_carbohydrates;
 
                 dishes_names_all.eq(i).text((i + 1) + '. ' + result[i].product_name);
