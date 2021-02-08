@@ -61,7 +61,15 @@ function getMenu(table_id , day_id = 1) {
         }, //отправляемые данные
         success: function (response, textStatus, jqXHR) { //Если данные отправлены успешно
             var result = $.parseJSON(response);
-            $('#table-image').attr('src', result[0].table_image);
+            console.log(result[0].table_image);
+            //колхоз 4 недели без фоток 
+            let table_all_imgsrc = result[0].table_image;
+            
+            if(table_all_imgsrc.indexOf('tables/4-') + 1) {
+                table_all_imgsrc = '/img/design/sections/menu/no_menu_image.jpg'
+            }
+            // конец колхоза
+            $('#table-image').attr('src', table_all_imgsrc);
             $('#table-description').text(result[0].table_description);
             for (var i = 0; i < result.length; i++) {
 
@@ -79,7 +87,7 @@ function getMenu(table_id , day_id = 1) {
                 proteins_item.eq(i).text(result[i].product_proteins) ;
                 fats_item.eq(i).text(result[i].product_fats) ;
                 carbohydrates_item.eq(i).text(result[i].product_carbohydrates) ;
-
+                
                 food_images.eq(i).attr('src', result[i].product_image);
                 food_names.eq(i).text(result[i].product_name);
                 food_descriptions.eq(i).text('(' + result[i].product_description + ')');
