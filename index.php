@@ -284,6 +284,8 @@
                                     <div class="carousel-item active">
                                         <div class="carousel-item-slide">
                                             <div class="carousel-item-img">
+
+
                                                 <?php if( getCurrentWeek() == '4') : ?>
                                                 <img src="/img/design/sections/menu/no_menu_image.jpg" class="img-fluid"
                                                     id="table-image" alt="image">
@@ -291,6 +293,8 @@
                                                 <img src="<?= $dishes_first[0]['table_image']?>" class="img-fluid"
                                                     id="table-image" alt="image">
                                                 <?php endif; ?>
+
+
                                             </div>
                                             <div class="carousel-item-text">
                                                 <div class="menu-results">
