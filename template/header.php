@@ -29,12 +29,12 @@ $orderUrl = $orderUrl[0];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="Доставка еды для диетического питания" />
-    <meta name="description" content="Доставка еды для диетического питания" />
-    <meta property="og:title" content="Доставка еды для диетического питания">
+    <meta name="keywords" content="Доставка диетического питания по столам № 1-15" />
+    <meta name="description" content="Доставка диетического питания по столам № 1-15" />
+    <meta property="og:title" content="Доставка диетического питания по столам № 1-15">
     <meta property="og:site_name" content="pevsner.ru">
     <meta property="og:url" content="https://pevsner.ru/">
-    <meta property="og:description" content="Доставка еды для диетического питания">
+    <meta property="og:description" content="Доставка диетического питания по столам № 1-15">
     <meta property="og:image" content="https://pevsner.ru/img/design/logo/logo.png">
     <meta property="og:type" content="website">
     <!--Bootstrap-->
@@ -49,7 +49,7 @@ $orderUrl = $orderUrl[0];
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/media.css">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
-    <title>Доставка еды для диетического питания</title>
+    <title>Доставка диетического питания по столам № 1-15</title>
     <!-- Facebook Pixel Code -->
     <script>
     ! function(f, b, e, v, n, t, s) {
@@ -138,7 +138,7 @@ $orderUrl = $orderUrl[0];
                     class="main-banner d-flex w-100 text-color-white align-items-center justify-content-center flex-column">
                     <img src="/img/design/header/logo-pic-white.png" alt="logo-pic" class="main-banner__logo img-fluid">
                     <div class="main-banner__text">
-                        <h1>Доставка готового питания по диетическим столам Певзнера</h1>
+                        <h1>Доставка диетического питания по столам № 1-15</h1>
                     </div>
                 </div>
             </div>

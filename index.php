@@ -286,7 +286,7 @@
                                             <div class="carousel-item-img">
 
 
-                                                <?php if( getCurrentWeek() == '4') : ?>
+                                                <?php if( getCurrentWeek() == '4' || (strpos($dishes_first[0]['table_image'], 'tables/4-')!==false)) : ?>
                                                 <img src="/img/design/sections/menu/no_menu_image.jpg" class="img-fluid"
                                                     id="table-image" alt="image">
                                                 <?php else : ?>
