@@ -459,13 +459,15 @@ if (isset($_POST['form_order'])) {
                     $result = [
                         'text' => "Спасибо за заказ , $name , Менеджер свяжется после оплаты :) Ваш номер заказа : #$order_num",
                         'order_num' => $order_num,
-                        'url' => $url_to_user
+                        'url' => $url_to_user, 
+                        'order_description' => $order_description
                     ];
                 } else {
                     $result = [
                         'text' => "Спасибо за заказ , $name , Менеджер свяжется для уточнения деталей :) Ваш номер заказа : #$order_num",
                         'order_num' => $order_num,
-                        'url' => ''
+                        'url' => '', 
+                        'order_description' => $order_description
                     ];
                 }
 

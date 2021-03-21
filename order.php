@@ -57,7 +57,7 @@ history.pushState('', document.title, window.location.pathname);
                     <?echo $sum; ?> руб.
                 </dd>
                 <dt class="col-sm-3">Заказ :</dt>
-                <dd class="col-sm-9 form-order_forShow for_GA4">
+                <dd class="col-sm-9 form-order_forShow">
                     <?echo $order; ?>
                 </dd>
             </dl>
