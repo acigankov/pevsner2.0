@@ -376,11 +376,27 @@ function getDishes($day_id , $table_id) {
     $current_week = getCurrentWeek();
 
     if ($day_id < date('N')) {
-        if ($current_week < 4) {
-            $week_num = $current_week + 1; 
-        } else {
-            $week_num = 1;
+        switch($current_week) {
+            case 1:
+                $week_num = 3;
+                break;
+            case 2:
+                $week_num = 4;
+                break;
+            case 3:     
+                $week_num = 2;
+                break;
+            case 4:     
+                $week_num = 1;
+                break;    
         }
+
+        // if ($current_week < 4) {
+        //     $week_num = $current_week + 1; 
+        // } else {
+        //     $week_num = 1;
+        // }
+
     } else {
         $week_num = $current_week;
     }
