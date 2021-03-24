@@ -113,114 +113,6 @@
         </div>
     </section>
 
-    <section class="menu-order" id="menu_anchor">
-        <div class="container bg-color-white">
-            <div class="row">
-                <div class="section-title-img w-100 d-flex justify-content-center pt-5">
-                    <img src="img/design/sections/menu/peppers.png" alt="image">
-                </div>
-                <div class="section-title">
-                    <h3>выберите свой план питания</h3>
-                </div>
-            </div>
-            <div class="row menu-cards">
-                <div class="menu-cards-title w-100 text-center p-3">
-                    <h4 class="text-color-green text-uppercase">Мы бережно приготовим и доставим Вам диетические блюда
-                    </h4>
-                </div>
-            </div>
-            <div class="menu-cards row">
-
-                <?php foreach ($foodsets as $foodset) : ?>
-                <div class="col-md-6 col-lg-4">
-                    <div class="menu-cards-content__item card shadow">
-                        <div class="card-body">
-                            <div class="card-title"><?= $foodset['name'] ?></div>
-                            <?php if($foodset['sum_for_show'] == 1490):?>
-                            <h6 class="card-subtitle"><span
-                                    style="text-decoration:line-through; color: red;"><?=$foodset['sum_for_show']?></span>
-                                990 руб/день</h6>
-                            <?php else:?>
-                            <h6 class="card-subtitle"><?=$foodset['sum_for_show']?> руб/день</h6>
-                            <?php endif ?>
-                            <div class="card-text">
-                                <?= $foodset['description'] ?>
-                            </div>
-                            <div class="card-link align-items-center justify-content-center d-flex w-100 p-4">
-                                <?php if($showOrderButton) : ?>
-                                <a href="/order.php?order_sum=<?= $foodset['price'] ?>&order=<?= $foodset['name'] ?>&product_code=<?= $foodset['frontpad_api_id'] ?>&days=<?= $foodset['days']?>"
-                                    style="color:#fff" class="my-btn btn-green" type="button"
-                                    data-sum="<?= $foodset['price'] ?>" aria-disabled="true">заказать</a>
-                                <?php endif ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endforeach ?>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="banner" id="banner">
-        <div class="container bg-color-white">
-            <div class="banner__img d-flex align-items-center justify-content-center w-100 py-3">
-                <a class="anchor__link" href="#checkout_anchor">
-                    <img src="img/design/sections/banner/banner-big.png" alt="banner"
-                        class="img-fluid banner__img_big d-none d-md-inline">
-                    <img src="img/design/sections/banner/banner-mob.png" alt="banner"
-                        class="img-fluid banner__img_mob d-md-none">
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="testimonials" id="testimonials">
-        <div class="container bg-color-white">
-            <div class="row">
-                <div class="section-title">
-                    <h3>Отзывы</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div id="carousel-testimonials" class="carousel slide w-100" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <?php foreach ($testimonials as $key => $t) : ?>
-                        <div class="carousel-item <?php if ($key == 0) {echo 'active';}?>">
-                            <div class="testimonial-slide d-flex flex-column">
-
-                                <h3><?= $t['author'] ?></h3>
-                                <span class="testimonial-slide__date py-2">
-                                    <?= date('d.m.Y', strtotime($t['date_add'])) ?>
-                                </span>
-
-                                <?php if($t['image']) : ?>
-                                <a href="<?= $t['url'] ?>" target="_blank">
-                                    <img src="<?= $t['image'] ?>" alt="" class="img-fluid shadow">
-                                </a>
-                                <?php endif; ?>
-                                <p class="testimonial-slide__text py-3"><?= $t['text'] ?></p>
-                            </div>
-                        </div>
-                        <?php endforeach; ?>
-                    </div>
-                    <a class="carousel-control-prev" href="#carousel-testimonials" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel-testimonials" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-center">
-                <button class="my-btn btn-green" type="button" data-toggle="modal"
-                    data-target="#modal-testimonial">написать отзыв</button>
-            </div>
-        </div>
-    </section>
 
     <?php if ($showMenu) : ?>
     <section class="menu" id="checkout_anchor">
@@ -421,6 +313,117 @@
         </div>
     </section>
     <?php endif; ?>
+
+    <section class="menu-order" id="menu_anchor">
+        <div class="container bg-color-white">
+            <div class="row">
+                <div class="section-title-img w-100 d-flex justify-content-center pt-5">
+                    <img src="img/design/sections/menu/peppers.png" alt="image">
+                </div>
+                <div class="section-title">
+                    <h3>выберите свой план питания</h3>
+                </div>
+            </div>
+            <div class="row menu-cards">
+                <div class="menu-cards-title w-100 text-center p-3">
+                    <h4 class="text-color-green text-uppercase">Мы бережно приготовим и доставим Вам диетические блюда
+                    </h4>
+                </div>
+            </div>
+            <div class="menu-cards row">
+
+                <?php foreach ($foodsets as $foodset) : ?>
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-cards-content__item card shadow">
+                        <div class="card-body">
+                            <div class="card-title"><?= $foodset['name'] ?></div>
+                            <?php if($foodset['sum_for_show'] == 1490):?>
+                            <h6 class="card-subtitle"><span
+                                    style="text-decoration:line-through; color: red;"><?=$foodset['sum_for_show']?></span>
+                                990 руб/день</h6>
+                            <?php else:?>
+                            <h6 class="card-subtitle"><?=$foodset['sum_for_show']?> руб/день</h6>
+                            <?php endif ?>
+                            <div class="card-text">
+                                <?= $foodset['description'] ?>
+                            </div>
+                            <div class="card-link align-items-center justify-content-center d-flex w-100 p-4">
+                                <?php if($showOrderButton) : ?>
+                                <a href="/order.php?order_sum=<?= $foodset['price'] ?>&order=<?= $foodset['name'] ?>&product_code=<?= $foodset['frontpad_api_id'] ?>&days=<?= $foodset['days']?>"
+                                    style="color:#fff" class="my-btn btn-green" type="button"
+                                    data-sum="<?= $foodset['price'] ?>" aria-disabled="true">заказать</a>
+                                <?php endif ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach ?>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="banner" id="banner">
+        <div class="container bg-color-white">
+            <div class="banner__img d-flex align-items-center justify-content-center w-100 py-3">
+                <a class="anchor__link" href="#checkout_anchor">
+                    <img src="img/design/sections/banner/banner-big.png" alt="banner"
+                        class="img-fluid banner__img_big d-none d-md-inline">
+                    <img src="img/design/sections/banner/banner-mob.png" alt="banner"
+                        class="img-fluid banner__img_mob d-md-none">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonials" id="testimonials">
+        <div class="container bg-color-white">
+            <div class="row">
+                <div class="section-title">
+                    <h3>Отзывы</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div id="carousel-testimonials" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <?php foreach ($testimonials as $key => $t) : ?>
+                        <div class="carousel-item <?php if ($key == 0) {echo 'active';}?>">
+                            <div class="testimonial-slide d-flex flex-column">
+
+                                <h3><?= $t['author'] ?></h3>
+                                <span class="testimonial-slide__date py-2">
+                                    <?= date('d.m.Y', strtotime($t['date_add'])) ?>
+                                </span>
+
+                                <?php if($t['image']) : ?>
+                                <a href="<?= $t['url'] ?>" target="_blank">
+                                    <img src="<?= $t['image'] ?>" alt="" class="img-fluid shadow">
+                                </a>
+                                <?php endif; ?>
+                                <p class="testimonial-slide__text py-3"><?= $t['text'] ?></p>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel-testimonials" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-testimonials" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <button class="my-btn btn-green" type="button" data-toggle="modal"
+                    data-target="#modal-testimonial">написать отзыв</button>
+            </div>
+        </div>
+    </section>
+
+
 
     <section class="map">
         <div class="container bg-color-white">
