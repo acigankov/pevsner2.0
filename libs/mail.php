@@ -291,15 +291,15 @@ if (isset($_POST['form_order'])) {
             //$payment_type === 1 ? $payment_type_for_email = 'наличные' : $payment_type_for_email = 'картой';
             switch($payment_type) {
                 case 1 :
-                    $payment_type_for_email = 'наличные';
+                    $payment_type_for_email = 'наличные 💵';
                     $payment_api_code = '1';
                     break;
                 case 2 :
-                    $payment_type_for_email = 'картой на сайте';
+                    $payment_type_for_email = 'картой на сайте 💳🌐';
                     $payment_api_code = '2';
                     break;
                 case 3 :
-                    $payment_type_for_email = 'картой при получении';
+                    $payment_type_for_email = 'картой при получении 💳🏃‍♂️';
                     $payment_api_code = '94';
                     break;
             }
