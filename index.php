@@ -671,6 +671,7 @@
 
     </section>
 
+    <?php if($showPevsnerSection) : ?>
     <section class="pevsner">
         <div class="container bg-color-white">
             <div class="row align-items-center pb-5">
@@ -690,10 +691,10 @@
                             class="img-fluid shadow">
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
 </main>
 
