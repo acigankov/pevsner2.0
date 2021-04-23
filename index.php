@@ -57,7 +57,7 @@
                     </div>
                     <div class="how-descr-title__text w-100 ml-3">
                         <h3>Соблюдать диету теперь просто! </h3>
-                        <span>Мы доставляем готовое диетическое питание по всем 15 столам Певзнера</span>
+                        <span>Мы доставляем готовое диетическое питание по всем 15 столам.</span>
 
                     </div>
                     <div class="how-descr-title__logo-right">
@@ -625,10 +625,10 @@
                                 <img src="img/design/sections/info/1.png" alt="icon" class="img-fluid">
                             </div>
                             <div class="info-item__text">
-                                <h5 class="text-color-green text-uppercase">СТРОГО ПРИДЕРЖИВАЕМСЯ МЕНЮ СТОЛОВ ПЕВЗНЕРА
+                                <h5 class="text-color-green text-uppercase">СТРОГО ПРИДЕРЖИВАЕМСЯ МЕНЮ СТОЛОВ №1-15
                                 </h5>
                                 <span>Меню проработано с учетом всех особенностей
-                                    отдельных столов Певзнера.
+                                    отдельных столов №1-15.
                                     Мы используем только разрешенные ингредиенты.
                                 </span>
                             </div>
