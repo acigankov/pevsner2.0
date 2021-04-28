@@ -19,7 +19,7 @@ $(document).ready(function () {
     });
     e.preventDefault();
   });
-  //test comment
+
   //скролл при клике на якорь //TODO переделать на data
   $(".anchor__link").on("click", function (e) {
     //отменяем стандартную обработку нажатия по ссылке
