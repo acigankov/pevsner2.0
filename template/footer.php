@@ -2,7 +2,7 @@
             <div class="container bg-color-footer">
                 <div class="row">
                     <div class="footer-top-line">
-                        <div class="logo"><a href="/"><img src="img/design/logo/logo.png" alt="logo"
+                        <div class="logo"><a href="/"><img src="img/design/logo/logo.jpg" alt="logo"
                                     class="img-fluid"></a></div>
                         <div class="footer-content-info__tel py-2">
                             <a href="tel:+74955858203"><span><i class="fas fa-phone"></i></span> +7 (495) 585-8203</a>
@@ -31,7 +31,7 @@
                             <div
                                 class="footer-content-info__contact d-flex text-left align-items-center justify-content-around py-2">
                                 <?php if($showWAphone) : ?>
-                                <a href="https://wa.me/79037913869" target="_blank" title="WhatsApp"
+                                <a href="https://wa.me/79085034219" target="_blank" title="WhatsApp"
                                     class="footer-content-info-soc__link"> <i class="fab fa-whatsapp"></i> </a>
                                 <?php endif ?>
                                 <?php if($showInstIcon) : ?>

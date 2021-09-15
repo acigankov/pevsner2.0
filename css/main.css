@@ -274,18 +274,40 @@ a,a:focus,a:link,a:visited {
 
 /*header start*/
 
-
+.top-line__wrapper {
+    position: relative;
+}
 
 .top-line {
-    background-color: #787878;
+    /* background-color: #787878; */
+    background-color: #fff;
     opacity: 0.95;
-    /*background-image: url('../img/design/header/top-line-bg.png');*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    color:#000;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url('../img/design/header/hamburger.png');
+    background-size: 100% 16px;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color:#000;
 }
 
 .top-line .navbar-dark .navbar-nav .nav-link {
-    color: #fff;
+    color: #000;
 }
 
+.logo img {
+    max-height: 75px;
+}
+
+.top-line__city a, .top-line__phone a {
+    color: #000;
+}
 
 .top-line .navbar-dark .navbar-nav .nav-link:focus, 
 .top-line .navbar-dark .navbar-nav .nav-link:hover {
@@ -874,13 +896,19 @@ footer {
     font-size: 0.7rem;
 }
 
+footer i {
+    color: #15817c;
+}
+
 .footer-top-line .logo  {
     flex-basis: 33.33%;
    
 }
 
 .footer-top-line .logo img {
-    max-width: 150px;
+    max-height: 150px;
+    border: 2px solid #15817c;
+    border-radius: 10% 10% 10% 0;
 }
 
 .footer-top-line {

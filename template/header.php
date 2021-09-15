@@ -118,51 +118,53 @@ $orderUrl = $orderUrl[0];
     <div id="button-up" class="animated fadeInRightBig"><i class="fas fa-arrow-up"></i></div>
     <!--конец button UP-->
     <!--button CALL-->
-    <a class="pulse" href="https://wa.me/79037913869" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a class="pulse" href="https://wa.me/79085034219" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <!--конец button CALL-->
     <header>
         <div class="container">
-            <div class="row top-line align-items-center">
-                <nav class="top-line w-100 navbar navbar-expand-md navbar-dark">
+            <div class="top-line__wrapper">
+                <div class="row top-line align-items-center">
+                    <nav class="w-100 navbar navbar-expand-md navbar-dark">
 
-                    <div class="logo col-2 d-flex">
-                        <a href="/"><img src="img/design/logo/logo.png" alt="logo" class="img-fluid"></a>
-                    </div>
-
-                    <div class="top-line__phone d-flex flex-column justify-content-between text-color-white ml-2">
-                        <span class="top-line__city "><i class="fab fa-instagram" style="text-align: center;"></i>
-                            &nbsp; <a href="https://www.instagram.com/dieta_pevsner.ru/"
-                                target="_blank">Instagram</a></span>
-                        <a href="tel:+74955858203" class="d-none d-sm-flex"><span><i
-                                    class="fas fa-phone"></i></span>&nbsp; +7 (495) 585-8203</a>
-                        <span class="align-items-center d-flex"><i class="fas fa-business-time"></i> &nbsp; 08:00 -
-                            23:00</span>
-                        <!--<button class="my-btn btn-green">перезвоните мне</button>-->
-                    </div>
-                    <?php if($orderUrl === '/') :?>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop"
-                        aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation-Top">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarTop">
-                        <div class="navbar-nav text-uppercase text-right">
-                            <a class="nav-item nav-link anchor__link" href="#how_anchor">Как это работает<span
-                                    class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link anchor__link" href="#menu_anchor">Цены</a>
-                            <a class="nav-item nav-link anchor__link" href="#checkout_anchor">Меню</a>
-                            <a class="nav-item nav-link anchor__link" href="#contacts_anchor">Контакты</a>
+                        <div class="logo col-2 d-flex">
+                            <a href="/"><img src="img/design/logo/logo.jpg" alt="logo" class="img-fluid"></a>
                         </div>
-                    </div>
-                    <?php endif;?>
-                </nav>
-            </div>
+
+                        <div class="top-line__phone d-flex flex-column justify-content-betweenml-2">
+                            <span class="top-line__city "><i class="fab fa-instagram" style="text-align: center;"></i>
+                                &nbsp; <a href="https://www.instagram.com/dieta_pevsner.ru/"
+                                    target="_blank">Instagram</a></span>
+                            <a href="tel:+74955858203" class="d-none d-sm-flex"><span><i
+                                        class="fas fa-phone"></i></span>&nbsp; +7 (495) 585-8203</a>
+                            <span class="align-items-center d-flex"><i class="fas fa-business-time"></i> &nbsp; 08:00 -
+                                23:00</span>
+                            <!--<button class="my-btn btn-green">перезвоните мне</button>-->
+                        </div>
+                        <?php if($orderUrl === '/') :?>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop"
+                            aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation-Top">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarTop">
+                            <div class="navbar-nav text-uppercase text-right">
+                                <a class="nav-item nav-link anchor__link" href="#how_anchor">Как это работает<span
+                                        class="sr-only">(current)</span></a>
+                                <a class="nav-item nav-link anchor__link" href="#menu_anchor">Цены</a>
+                                <a class="nav-item nav-link anchor__link" href="#checkout_anchor">Меню</a>
+                                <a class="nav-item nav-link anchor__link" href="#contacts_anchor">Контакты</a>
+                            </div>
+                        </div>
+                        <?php endif;?>
+                    </nav>
+                </div>
+            </div><!-- /.top-line__wrapper -->
             <div class="row">
                 <!-- <a href="https://www.instagram.com/dieta_pevsner.ru/" target="_blank"><img class="img-fluid"
                         src="/img/design/header/banner.jpg" alt=""></a> -->
                 <div
                     class="main-banner d-flex w-100 text-color-white align-items-center justify-content-center flex-column">
-                    <img src="/img/design/header/logo-pic-white.png" alt="logo-pic" class="main-banner__logo img-fluid">
-                    <div class="main-banner__text">
+                    <img src="/img/design/header/logo-pic-white.png" alt="logo-pic" class="main-banner__logo img-fluid d-none">
+                    <div class="main-banner__text d-none">
                         <h1>Доставка диетического питания по столам № 1-15</h1>
                     </div>
                 </div>

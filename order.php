@@ -161,16 +161,16 @@ history.pushState('', document.title, window.location.pathname);
                 <div class="form-row align-items-center">
                     <div class="col-md-4 md-3">
                         <span class="py-2">Привезти: </span>
-                        <div class="form-check">
+                        <!--<div class="form-check">
                             <input class="form-check-input check" type="radio" name="delivery_time"
                                 id="deliveryTime_morning" value="Утром" checked required>
                             <label class="form-check-label " for="deliveryTime_morning">
                                 Утром
                             </label>
-                        </div>
+                        </div>-->
                         <div class="form-check">
                             <input class="form-check-input check" type="radio" name="delivery_time"
-                                id="deliveryTime_evening" value="Вечером" required>
+                                id="deliveryTime_evening" value="Вечером" required checked>
                             <label class="form-check-label" for="deliveryTime_evening">
                                 Вечером
                             </label>
