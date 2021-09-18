@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="row how-descr">
-                <div class="how-descr-title d-flex w-100 align-items-center justify-content-between mb-1 p-2">
+                <!-- <div class="how-descr-title d-flex w-100 align-items-center justify-content-between mb-1 p-2">
                     <div class="how-descr-title__logo">
                         <img src="img/design/logo/logo2.png" alt="logo" class="img-fluid">
                     </div>
@@ -64,7 +64,8 @@
                         <img src="img/design/sections/how/icon_title.png" alt="logo" class="img-fluid">
                     </div>
 
-                </div>
+                </div> -->
+                <img src="img/design/sections/how/tables.jpg" alt="tables" class="img-fluid">
                 <div class="d-flex w-100 flex-column align-items-center justify-content-center p-2">
                     <span class="text-center">Оформить заказ можно на сайте или по телефону +7 (495) 585-82-03</span>
                     <a class="anchor__link call-title__button my-btn btn-green my-5" href="#menu_anchor">заказать</a>
@@ -236,7 +237,7 @@
                                     <div class="carousel-item carousel-dishes">
                                         <div class="carousel-item-slide">
                                             <div class="carousel-item-img">
-                                                <div class="carousel-item-img__badge"><?= $dish['food_time']?></div>
+                                                <div class="carousel-item-img__badge shadow"><?= $dish['food_time']?></div>
                                                 <img src="<?= $dish['product_image']?>" class="img-fluid" alt="image">
                                             </div>
 

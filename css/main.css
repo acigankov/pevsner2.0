@@ -1,13 +1,17 @@
 /*settings*/
 @import url("fonts.css") all;
 
-    /*#button-up start*/
+:root {
+    --accent-color : #00807F;
+}
+
+/*#button-up start*/
 #button-up {
     display: none;
     position: fixed;
     right: 8%;
     top: 70%;
-    border: 1px solid #00B670;
+    border: 1px solid var(--accent-color);
     height: 50px;
     width: 50px;
     text-align: center;
@@ -26,7 +30,7 @@
 #button-up:hover {
     background-color: #fff;
     border: 1px solid #222;
-    color:#00B670
+    color:var(--accent-color)
 }
     /*#button-up end*/
     
@@ -39,7 +43,7 @@
   top: 85%;
   right: 8%;
   /*transform: translate(-50%, -50%);*/
-  background: #00B670;
+  background: var(--accent-color);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -60,7 +64,7 @@
 	display: block;
 	position: absolute;
 	border: 50%;
-	border: 1px solid #00B670;
+	border: 1px solid var(--accent-color);
 	left: -20px;
 	right: -20px;
 	top: -20px;
@@ -121,7 +125,7 @@
     padding: 3px 8px; 
     color: #222; 
     text-align: center; 
-    background-color: #00B670; 
+    background-color: var(--accent-color); 
     border-radius: .25rem; 
 } 
 
@@ -131,7 +135,7 @@
     margin-left: -3px; 
     content: ""; 
     border-width: 5px 5px 0; 
-    border-top-color: #00B670; 
+    border-top-color: var(--accent-color); 
 } 
 /*Css для стрелка вправо*/
 
@@ -139,7 +143,7 @@
     margin-top: -3px; 
     content: ""; 
     border-width: 5px 5px 5px 0; 
-    border-right-color: #00B670; 
+    border-right-color: var(--accent-color); 
 } 
 /*Css для нижней стрелки*/
 
@@ -147,7 +151,7 @@
     margin-left: -3px; 
     content: ""; 
     border-width: 0 5px 5px; 
-    border-bottom-color: #00B670; 
+    border-bottom-color: var(--accent-color); 
 } 
 /*Css для левой стрелки*/
 
@@ -156,7 +160,7 @@
     margin-top: -3px; 
     content: ""; 
     border-width: 5px 0 5px 5px; 
-    border-left-color: #00B670; 
+    border-left-color: var(--accent-color); 
 } 
 /*bootstrap tooltips end*/  
     
@@ -210,11 +214,11 @@ button:focus,
 }
 
 .text-color-green {
-    color: #22B573;
+    color: var(--accent-color);
 }
 
 .bg-color-green {
-    background-color: #22B573;
+    background-color: var(--accent-color);
 }
 
 .bg-color-footer {
@@ -254,7 +258,7 @@ a,a:focus,a:link,a:visited {
     border: 1px solid #fff;
     border-radius: .5rem;
     padding: 8px 15px;
-    background: rgba(34,181,115, 0.9);
+    background-color: var(--accent-color);
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -407,7 +411,7 @@ a,a:focus,a:link,a:visited {
 .how-descr__badge {
     position: absolute;
     font-size: 2rem;
-    color:#00B670;
+    color:var(--accent-color);
     left: -35px;
 }
 /*section how end*/
@@ -416,7 +420,7 @@ a,a:focus,a:link,a:visited {
 
 .woman-description {
     margin-left: 20% ;
-    border: 3px solid #00B670;
+    border: 3px solid var(--accent-color);
     border-radius: 1rem;
     padding: 2rem 3rem;  
     color: #606060;
@@ -426,7 +430,7 @@ a,a:focus,a:link,a:visited {
 }
 .woman-description::before{
     content: ' ';
-    border-color: transparent transparent #00B670;
+    border-color: transparent transparent var(--accent-color);
     border-style: solid;
     border-width: 25px;
     position: absolute;
@@ -447,7 +451,7 @@ a,a:focus,a:link,a:visited {
 
 
 .woman-description a {
-    color: #00B670;
+    color: var(--accent-color);
     font-size: 1.3rem;
 }
 
@@ -469,7 +473,7 @@ a,a:focus,a:link,a:visited {
 
 .woman-title span {
     font-size: 1.2rem;
-    color: #00B670;
+    color: var(--accent-color);
     font-weight: 500;
 }
 
@@ -480,7 +484,7 @@ a,a:focus,a:link,a:visited {
 
 /*карточки меню*/
 .menu-cards .card {
-    border: 1px solid #00B670;
+    border: 1px solid var(--accent-color);
     border-radius: 0;
     margin-bottom: 1rem;
     min-height: 410px;
@@ -490,7 +494,7 @@ a,a:focus,a:link,a:visited {
     justify-content: center;
     align-items: center;
     padding: 10px 15px;
-    background: #00B670;
+    background: var(--accent-color);
     font-size: 1rem;
     text-transform: uppercase;
     font-family: 'Roboto-Bold' , sans-serif;
@@ -502,7 +506,7 @@ a,a:focus,a:link,a:visited {
 
 .menu-cards .card-subtitle {
     text-align: center;
-    color:#00B670; 
+    color:var(--accent-color); 
     font-size: 2rem;
     font-family: 'Roboto-Bold' , sans-serif;
     margin-bottom: 1rem;
@@ -542,7 +546,7 @@ a,a:focus,a:link,a:visited {
 }
 
 .menu-content .nav-item .nav-link{
-    background:#00B670; 
+    background:var(--accent-color); 
     color: #fff;
     font-size: 0.9rem;  
     border-radius: 0;
@@ -566,7 +570,7 @@ a,a:focus,a:link,a:visited {
     position: absolute;
     height: 2px;
     width: 17px;
-    background:#00B670; 
+    background:var(--accent-color); 
     bottom: -7px;
     
 }*/
@@ -577,7 +581,7 @@ a,a:focus,a:link,a:visited {
 
 .days-line button.active  {
     min-width: 5.5rem;
-    background-color: #4f856b;
+    opacity: 0.7;
 }
 
 /*кнопки переключения nav-pills end*/
@@ -604,7 +608,7 @@ a,a:focus,a:link,a:visited {
     bottom: -50px;
 }
 .menu-content .carousel .carousel-indicators li {
-    background-color: #00B670;
+    background-color: var(--accent-color);
 }
 
 .menu-content .carousel .carousel-item-slide {
@@ -622,11 +626,11 @@ a,a:focus,a:link,a:visited {
 
 .menu-content .carousel .carousel-item-img__badge {
     position: absolute;
-    background-color: #22B573;
+    background-color: var(--accent-color);
     color: #fff;
     padding: .4rem;
     top: 5%;
-    left: 0;
+    left: 1%;
     width: 200px;
     text-align: center;
     font-size: 1.25rem;
@@ -642,7 +646,7 @@ a,a:focus,a:link,a:visited {
 .menu-content .carousel .carousel-item-text{
     flex-basis: 35%;
     text-align: center;
-    color: #00B670;
+    color: var(--accent-color);
 }
 .menu-content .carousel .carousel-item-text>h3 {
     font-family: 'Roboto-Bold' , sans-serif;
@@ -657,7 +661,7 @@ a,a:focus,a:link,a:visited {
 .menu-content .carousel .carousel-control-next-icon, .menu-content .carousel .carousel-control-prev-icon {
     width: 50px;
     height: 50px;
-    color:#00B670;
+    color:var(--accent-color);
     background-image: none;
     font-size: 3rem;
 }
@@ -673,7 +677,7 @@ a,a:focus,a:link,a:visited {
 .menu-results {
     background: #fff;
     background-clip: padding-box;
-    border: 2px solid #00B670;
+    border: 2px solid var(--accent-color);
     border-radius: 4px;
     padding: 0;
     min-width: 250px;
@@ -683,7 +687,7 @@ a,a:focus,a:link,a:visited {
 }
 .menu-results:before{
     content: ' ';
-    border-color: #00B670 transparent transparent;
+    border-color: var(--accent-color) transparent transparent;
     border-style: solid;
     border-width: 17px;
     position: absolute;
@@ -739,7 +743,7 @@ a,a:focus,a:link,a:visited {
 /* цифры */
 .menu-results-descr .countdown li span{
     text-align: center;
-    background-color: #00B670;
+    background-color: var(--accent-color);
     border-radius: 0.2rem;
     width: 100%;
     color: #fff;
@@ -763,7 +767,7 @@ a,a:focus,a:link,a:visited {
 .menu-results-descr .countdown li div{
     text-align: center;
     margin:0;
-    color: #00B670;
+    color: var(--accent-color);
     font-size: 0.8rem;
 }
 
@@ -897,7 +901,7 @@ footer {
 }
 
 footer i {
-    color: #15817c;
+    color: var(--accent-color);
 }
 
 .footer-top-line .logo  {
@@ -907,7 +911,7 @@ footer i {
 
 .footer-top-line .logo img {
     max-height: 150px;
-    border: 2px solid #15817c;
+    border: 2px solid var(--accent-color);
     border-radius: 10% 10% 10% 0;
 }
 
