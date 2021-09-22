@@ -118,7 +118,7 @@ $orderUrl = $orderUrl[0];
     <div id="button-up" class="animated fadeInRightBig"><i class="fas fa-arrow-up"></i></div>
     <!--конец button UP-->
     <!--button CALL-->
-    <a class="pulse" href="https://wa.me/79085034219" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a class="pulse" href="https://wa.me/79268915187" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <!--конец button CALL-->
     <header>
         <div class="container">

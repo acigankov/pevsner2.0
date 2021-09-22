@@ -31,7 +31,7 @@
                             <div
                                 class="footer-content-info__contact d-flex text-left align-items-center justify-content-around py-2">
                                 <?php if($showWAphone) : ?>
-                                <a href="https://wa.me/79085034219" target="_blank" title="WhatsApp"
+                                <a href="https://wa.me/79268915187" target="_blank" title="WhatsApp"
                                     class="footer-content-info-soc__link"> <i class="fab fa-whatsapp"></i> </a>
                                 <?php endif ?>
                                 <?php if($showInstIcon) : ?>
