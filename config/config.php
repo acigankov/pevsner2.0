@@ -38,7 +38,7 @@ $showInstIcon = true;
 $showSectionFaq = true;
 $showSectionAkcii = true;
 $showOrderButton = true;
-$showPevsnerSection = false;
+$showPevsnerSection = true;
 
 //КБЖУ ух костыль) 
 
