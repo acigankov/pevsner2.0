@@ -32,6 +32,14 @@
     .how-content-item__img {
         max-width: 100px;
     }
+    
+    .how-content-item_fullw {
+        flex-basis: 100%;
+    }
+
+    .how-content-item_fullw > .how-content-item__descr {
+        max-width: 160px;
+    }
 
     .how-content-item__descr {
         font-size: 0.9rem;

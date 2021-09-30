@@ -36,8 +36,12 @@
                         <div class="how-content-item__descr">Вы выбираете диету, которую Вам прописал врач</div>
                     </div>
                     <div class="how-content-item">
-                        <img src="img/design/sections/how/icon_2.png" alt="icon" class="how-content-item__img">
-                        <div class="how-content-item__descr">мы все приготовим и бесплатно доставим по Москве</div>
+                        <img src="img/design/sections/how/icon_2_new.png" alt="icon" class="how-content-item__img">
+                        <div class="how-content-item__descr">Всё готовим по требованиям врача</div>
+                    </div>
+                    <div class="how-content-item how-content-item_fullw">
+                        <img src="img/design/sections/how/icon_3_new.png" alt="icon" class="how-content-item__img">
+                        <div class="how-content-item__descr" >Ежедневно привозим свежую еду</div>
                     </div>
                     <div class="how-content-item">
                         <img src="img/design/sections/how/icon_3.png" alt="icon" class="how-content-item__img">
