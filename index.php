@@ -129,6 +129,7 @@
                 <div class="section-title">
                     <h3>меню</h3>
                 </div>
+                <h4 class="menu-subtitle">*меню является примерным, некоторые блюда могут быть заменены, уточните у менеджера точный список блюд на день</h4>
             </div>
             <div class="row">
                 <div class="menu-content w-100">

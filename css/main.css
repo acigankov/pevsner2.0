@@ -535,6 +535,14 @@ a,a:focus,a:link,a:visited {
 /*карточки меню end*/
 
 /*кнопки переключения nav-pills start*/
+.menu-subtitle {
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: none;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
 .pills-tab-line {
     width: 80%;
     margin: 0 auto;
@@ -565,16 +573,7 @@ a,a:focus,a:link,a:visited {
     position: relative;
 }
 
-/*.menu-content .nav-item .nav-link.active:after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 17px;
-    background:var(--accent-color); 
-    bottom: -7px;
-    
-}*/
+
 
 .days-line button {
     min-width: 5.5rem;
