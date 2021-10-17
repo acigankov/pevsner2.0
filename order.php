@@ -45,9 +45,21 @@ history.pushState('', document.title, window.location.pathname);
             <div class="section-title">
                 <h2>Оформить заказ</h2>
             </div>
-        </div>
+        </div>  
 
-        <div class="order-body pb-3 ">
+        <div class="order-check" data-order-check-body>
+            <div class="section-title">
+                <h6>Выберите Ваш регион доставки</h6>
+            </div>
+
+            <div class="row justify-content-center pb-5">
+                <button type="button" class="my-btn btn-green mr-5" data-check-region-button value="Москва и МО"><i class="fas fa-map-marker-alt"></i>&nbsp;Москва и МО</button>
+                <button type="button" class="my-btn btn-green" data-check-region-button value="Ростов"><i class="fas fa-map-marker-alt"></i>&nbsp;Ростов</button>
+            </div>
+
+        </div><!-- /.order-check -->
+
+        <div class="order-body pb-3" data-order-body>
             <!--                <div class="w-100 justify-content-center">
                                     <p>Для оформления заказа заполните форму ниже.</p>
                                 </div>-->
@@ -99,7 +111,7 @@ history.pushState('', document.title, window.location.pathname);
                     <div class="col-md-4 mb-3">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                <span class="input-group-text" ><i class="fas fa-map-marker-alt"></i><span data-ckecked-region-text></span></span>
                             </div>
                             <input type="text" class="form-control check" name="order-input-adress" placeholder="Адрес"
                                 value="" minlength="3" required>
@@ -257,6 +269,7 @@ history.pushState('', document.title, window.location.pathname);
                     value="<?= $days;?>">
                 <input type="hidden" class="form_order_kisel_add" name="form_order_kisel_add" value="">
                 <input type="hidden" class="form_order_product_add" name="form_order_product_add" value="">
+                <input type="hidden" class="form_order_regon" name="form_order_region" data-field-form-region value="" >
                 <button class="my-btn btn-green" type="submit">Заказать</button>
             </form>
             <div class="result_ d-none animated fadeIn"></div>

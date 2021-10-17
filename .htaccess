@@ -1,4 +1,0 @@
-#redirect all requests to https
-RewriteEngine On
-RewriteCond %{HTTP:Front-End-Https} !on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]

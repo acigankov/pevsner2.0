@@ -282,11 +282,19 @@ if (isset($_POST['form_order'])) {
         $error_msg = 'Ошибка! данные не переданы! form_order_product_add';
     }
 
+    //регион
+    if (isset($_POST['form_order_region'])) {
+        $region = $_POST['form_order_region'];
+    } 
+    else {
+        $error_msg = 'Ошибка! данные не переданы! form_order_region';
+    }
+
 
     //если нет ошибок
     if (!$error_msg) {
         //если сохрнанился заказ
-        $order_num = saveOrder($name, $adress, $tel_for_bd, $email, $sum, $order_description, $comment, $delivery_time, $payment_type, $selected_table);
+        $order_num = saveOrder($name, $region, $adress, $tel_for_bd, $email, $sum, $order_description, $comment, $delivery_time, $payment_type, $selected_table);
         if ($order_num) {
             //$payment_type === 1 ? $payment_type_for_email = 'наличные' : $payment_type_for_email = 'картой';
             switch($payment_type) {
@@ -308,6 +316,7 @@ if (isset($_POST['form_order'])) {
             $subject = '«Pevsner.ru». Новый заказ';
             $message = 'hello Manager! <br>' . "\r\n"
                     . 'Покупатель : ' . $name . ' <br>' . "\r\n"
+                    . 'Регион : ' . $region . ' <br>' . "\r\n"
                     . 'Адрес : ' . $adress . ' <br>' . "\r\n"
                     . 'Телефон  : ' . $tel_for_bd . '<br>' . "\r\n"
                     . 'Email : ' . $email . ' <br>' . "\r\n"
@@ -325,6 +334,7 @@ if (isset($_POST['form_order'])) {
             
             $message_to_telegram = '«Pevsner.ru». Новый #заказ 🥳' . PHP_EOL
                 . 'Покупатель : ' . $name . PHP_EOL
+                . 'Регион : ' . $region . PHP_EOL
                 . 'Адрес : ' . $adress . PHP_EOL
                 . 'Телефон : ' . $tel_for_bd . PHP_EOL
                 . 'Email : ' . $email . PHP_EOL
@@ -416,7 +426,7 @@ if (isset($_POST['form_order'])) {
                     <td style="">Состав заказа: ' . $order_description . ', ' . $selected_table .  '</td>
                 </tr>
                 <tr>
-                    <td style="">Адрес заказа: ' . $adress . '</td>
+                    <td style="">Адрес заказа: ' . $region . ', ' .  $adress . '</td>
                 </tr>
                 <tr>
                     <td style="padding-top:30px">C Уважением,</td>

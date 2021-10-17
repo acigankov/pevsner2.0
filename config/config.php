@@ -39,6 +39,7 @@ $showSectionFaq = true;
 $showSectionAkcii = true;
 $showOrderButton = true;
 $showPevsnerSection = true;
+$checkRegionInOrderPage = true;
 
 //КБЖУ ух костыль) 
 

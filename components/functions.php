@@ -89,17 +89,18 @@ function generateRandomString($length = 10) {
  * @return bool
  */
 
-function saveOrder($name , $adress , $tel , $email , $sum , $order_description , $comment , $delivery_time ,  $payment_type, $selected_table = null) {
+function saveOrder($name, $region, $adress, $tel, $email, $sum, $order_description, $comment, $delivery_time, $payment_type, $selected_table = null) {
 
     if ($name) {
 
         $db = DB::getConnection();
 
-        $sql = 'INSERT INTO orders (user, adress, tel, email, sum , description , comment , delivery_time , payment_type, selected_table ) '
-                . 'VALUES (:user , :adress, :tel, :email , :sum , :description , :comment, :delivery_time, :payment_type , :selected_table)';
+        $sql = 'INSERT INTO orders (user, region, adress, tel, email, sum, description, comment , delivery_time , payment_type, selected_table ) '
+                . 'VALUES (:user, :region, :adress, :tel, :email , :sum , :description , :comment, :delivery_time, :payment_type , :selected_table)';
         
         $result = $db->prepare($sql);
         $result->bindParam(':user', $name, PDO::PARAM_STR);
+        $result->bindParam(':region', $region, PDO::PARAM_STR);
         $result->bindParam(':adress', $adress, PDO::PARAM_STR);
         $result->bindParam(':tel', $tel, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
