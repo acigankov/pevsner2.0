@@ -459,7 +459,9 @@
             </div>
             <div class="row justify-content-center">
                 <img src="/img/design/sections/map/map.jpg" alt="map" class="img-fluid shadow map-img">
-
+            </div>
+            <div class="row justify-content-center mt-5">
+                <img src="/img/design/sections/map/map2.jpg" alt="map" class="img-fluid shadow map-img">
             </div>
         </div>
     </section>
