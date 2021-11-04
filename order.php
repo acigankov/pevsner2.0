@@ -2,26 +2,8 @@
 
 <?php
 
-if (isset($_GET['order_sum']) && !empty($_GET['order_sum'])) {
-    $sum = (int) $_GET['order_sum'];
-} else {
-    $goaway = 'yes';
-}
-
 if (isset($_GET['order']) && !empty($_GET['order'])) {
     $order = (array) getFoodsetById($_GET['order']);
-} else {
-    $goaway = 'yes';
-}
-
-if (isset($_GET['product_code']) && !empty($_GET['product_code'])) {
-    $product_code = $_GET['product_code'];
-} else {
-    $goaway = 'yes';
-}
-
-if (isset($_GET['days']) && !empty($_GET['days'])) {
-    $days = $_GET['days'];
 } else {
     $goaway = 'yes';
 }
@@ -39,7 +21,7 @@ window.location.href = '/';
 <?php endif;?>
 
 <script>
-//history.pushState('', document.title, window.location.pathname);
+history.pushState('', document.title, window.location.pathname);
 </script>
 
 
@@ -70,7 +52,7 @@ window.location.href = '/';
             <dl class="row justify-content-center">
                 <dt class="col-sm-3">Сумма :</dt>
                 <dd class="col-sm-9 form-sum_forShow bold">
-                    <?echo $sum; ?> руб.
+                    <?echo $order['price']; ?> руб.
                 </dd>
                 <dt class="col-sm-3">Заказ :</dt>
                 <dd class="col-sm-9 form-order_forShow">
@@ -264,13 +246,13 @@ window.location.href = '/';
                     </div>
                 </div>
                 <input type="hidden" name="form_order">
-                <input type="hidden" class="form_order_sum" name="form_order_sum" value="<?= $sum;?>">
-                <input type="hidden" class="form_order_order" name="form_order_order" value="<?= $order;?>">
+                <input type="hidden" class="form_order_sum" name="form_order_sum" value="<?= $order['price'];?>">
+                <input type="hidden" class="form_order_order" name="form_order_order" value="<?= $order['name'];?>">
                 <input type="hidden" class="form_order_number" name="form_order_number" value="">
                 <input type="hidden" class="form_order_product_code" name="form_order_product_code"
-                    value="<?= $product_code;?>">
+                    value="<?= $order['frontpad_api_id'];?>">
                 <input type="hidden" class="form_order_product_days" name="form_order_product_days"
-                    value="<?= $days;?>">
+                    value="<?= $order['days'];?>">
                 <input type="hidden" class="form_order_kisel_add" name="form_order_kisel_add" value="">
                 <input type="hidden" class="form_order_product_add" name="form_order_product_add" value="">
                 <input type="hidden" class="form_order_regon" name="form_order_region" data-field-form-region value="" >
