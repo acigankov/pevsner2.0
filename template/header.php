@@ -1,17 +1,14 @@
-<?php $maintenanceMode = false ?>
+<?php include_once 'config/config.php'; ?>
 
 <?php if ($maintenanceMode): ?>
 
-<div class="maintenance"
-    style="display: flex; align-items: center; justify-content: center; margin: 3rem auto; max-width: 90%;">
-    <img src="img/maintenance.jpg" style="max-width: 100%;height: auto;" alt="">
-</div>
-<?php die(); ?>
+    <div class="maintenance"
+        style="display: flex; align-items: center; justify-content: center; margin: 3rem auto; max-width: 90%;">
+        <img src="img/maintenance.jpg" style="max-width: 100%;height: auto;" alt="">
+    </div>
+    <?php die(); ?>
 
 <?php endif; ?>
-
-
-<?php include_once 'config/config.php'; ?>
 
 <?php
 
@@ -20,7 +17,6 @@ $orderUrl = explode('?', $orderUrl);
 $orderUrl = $orderUrl[0];
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -35,7 +31,7 @@ $orderUrl = $orderUrl[0];
     <meta property="og:site_name" content="pevsner.ru">
     <meta property="og:url" content="https://pevsner.ru/">
     <meta property="og:description" content="Доставка диетического питания по столам № 1-15">
-    <meta property="og:image" content="https://pevsner.ru/img/design/logo/logo.png">
+    <meta property="og:image" content="https://pevsner.ru/img/design/logo/logo.jpg">
     <meta property="og:type" content="website">
     <!--Bootstrap-->
     <link rel="stylesheet" href="/css/bootstrap.min.css">

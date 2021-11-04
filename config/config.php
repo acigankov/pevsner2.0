@@ -33,6 +33,8 @@ $testimonials = getTestimonials();
 $timer_section = false;
 
 
+//Блоки в верстке
+$maintenanceMode = false;
 $showWAphone = true;
 $showInstIcon = true;
 $showSectionFaq = true;
