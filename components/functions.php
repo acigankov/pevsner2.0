@@ -491,6 +491,31 @@ function getFoodsets() {
     return false;
 }
 
+/**
+ * Получить набор по id 
+ * @params null
+ * @return array
+ */
+function getFoodsetById($id) {
+    
+    $db = DB::getConnection();
+    
+    $sql = 'SELECT * from foodsets '
+            . ' WHERE id = :id ';
+    
+    $result = $db->prepare($sql); 
+    $result->bindParam(':id', $id, PDO::PARAM_INT);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();       
+    $foodsets = $result->fetch();
+    
+    if($foodsets){
+        return $foodsets;
+    }
+    
+    return false;
+}
+
 
 /**
  * Получить дни для структуры меню

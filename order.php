@@ -9,7 +9,7 @@ if (isset($_GET['order_sum']) && !empty($_GET['order_sum'])) {
 }
 
 if (isset($_GET['order']) && !empty($_GET['order'])) {
-    $order = (string) $_GET['order'];
+    $order = (array) getFoodsetById($_GET['order']);
 } else {
     $goaway = 'yes';
 }
@@ -39,7 +39,7 @@ window.location.href = '/';
 <?php endif;?>
 
 <script>
-history.pushState('', document.title, window.location.pathname);
+//history.pushState('', document.title, window.location.pathname);
 </script>
 
 
@@ -51,7 +51,6 @@ history.pushState('', document.title, window.location.pathname);
                 <h2>Оформить заказ</h2>
             </div>
         </div>  
-
         <div class="order-check" data-order-check-body>
             <div class="section-title">
                 <h6>Выберите Ваш регион доставки</h6>
@@ -75,7 +74,7 @@ history.pushState('', document.title, window.location.pathname);
                 </dd>
                 <dt class="col-sm-3">Заказ :</dt>
                 <dd class="col-sm-9 form-order_forShow">
-                    <?echo $order; ?>
+                    <?echo $order['name']; ?>
                 </dd>
             </dl>
 
