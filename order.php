@@ -19,11 +19,16 @@ if (isset($_GET['product_code']) && !empty($_GET['product_code'])) {
 } else {
     $goaway = 'yes';
 }
+
 if (isset($_GET['days']) && !empty($_GET['days'])) {
     $days = $_GET['days'];
 } else {
     $goaway = 'yes';
 }
+
+if (isset($_GET['table']) && !empty($_GET['table'])) {
+    $tableFromUrl = getTableNameById($_GET['table']);
+} 
 
 ?>
 
@@ -151,10 +156,10 @@ history.pushState('', document.title, window.location.pathname);
                 </div>
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
-                        <select class="custom-select check" name="selected_table" id="selected_table" required>
+                        <select class="custom-select check" name="selected_table" id="selected_table"  required>
                             <option value="0">выберите стол</option>
                             <?php foreach ($tables as $table) : ?>
-                            <option value="<?= $table['name']?>"><?= $table['name']?></option>
+                            <option value="<?= $table['name']?>" <?echo ($tableFromUrl == $table['name']) ? 'selected' : '' ?>><?= $table['name']?></option>
                             <?php endforeach ?>
                         </select>
                         <div class="invalid-feedback">

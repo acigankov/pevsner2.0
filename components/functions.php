@@ -284,6 +284,30 @@ function getTables() {
 }
 
 /**
+ * Получить имя стола по id
+ * @params null
+ * @return array
+ */
+
+function getTableNameById($id) {
+    
+    $db = DB::getConnection();
+    
+    $sql = 'SELECT name from tables WHERE id = :id';
+    $result = $db->prepare($sql); 
+    $result->bindParam(':id', $id, PDO::PARAM_INT);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();       
+    $tableName = $result->fetchColumn();
+    
+    if($tableName){
+        return $tableName;
+    }
+    
+    return false;
+}
+
+/**
  * Получить акции для структуры меню
  * @params null
  * @return array
