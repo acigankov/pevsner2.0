@@ -169,7 +169,7 @@ history.pushState('', document.title, window.location.pathname);
                         <div class="form-check">
                             <input class="form-check-input check" type="radio" name="delivery_time"
                                 id="deliveryTime_evening" value="Вечером" required checked>
-                            <label class="form-check-label" for="deliveryTime_evening">
+                            <label class="form-check-label ml-2" for="deliveryTime_evening">
                                 Вечером
                             </label>
                         </div>
@@ -185,21 +185,21 @@ history.pushState('', document.title, window.location.pathname);
                             <div class="form-check ">
                                 <input class="form-check-input check" type="radio" name="payment_type" value="1"
                                     id="order_input_check_cash" checked required>
-                                <label class="form-check-label" for="order_input_check_cash">
+                                <label class="form-check-label ml-2" for="order_input_check_cash">
                                     Наличными при получении
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input check" type="radio" name="payment_type" value="2"
                                     id="order_input_check_card" required>
-                                <label class="form-check-label" for="order_input_check_card">
+                                <label class="form-check-label ml-2" for="order_input_check_card">
                                     Оплата картой на сайте онлайн
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input check" type="radio" name="payment_type" value="3"
                                     id="order_input_check_card_2" required>
-                                <label class="form-check-label" for="order_input_check_card_2">
+                                <label class="form-check-label ml-2" for="order_input_check_card_2">
                                     Картой при получении
                                 </label>
                             </div>
@@ -220,10 +220,10 @@ history.pushState('', document.title, window.location.pathname);
                                     Добавить Ягодный Кисель (+100 руб / день)
                                 </label>
                             </div> -->
-                            <div class="form-check">
+                            <div class="form-check pl-0">
                                 <input class="form-check-input-addproduct" type="checkbox" value=""
                                     id="order_input_check_addproduct">
-                                <label class="form-check-label-addproduct" for="order_input_check_addproduct">
+                                <label class="form-check-label-addproduct ml-2" for="order_input_check_addproduct">
                                     Добавить Блюдо (+200 руб / день)
                                 </label>
                             </div>
@@ -236,7 +236,7 @@ history.pushState('', document.title, window.location.pathname);
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input check" type="checkbox" value="" id="order_input_check" required>
-                        <label class="form-check-label" for="order_input_check">
+                        <label class="form-check-label ml-2" for="order_input_check">
                             Я прочитал и согласен с <a href="/agreement.php" target="_blank">пользовательским
                                 соглашением</a>
                         </label>

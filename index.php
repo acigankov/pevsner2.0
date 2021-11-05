@@ -71,7 +71,8 @@
                 </div> -->
                 <img src="img/design/sections/how/tables.jpg" alt="tables" class="img-fluid">
                 <div class="d-flex w-100 flex-column align-items-center justify-content-center p-2">
-                    <span class="text-center">Оформить заказ можно на сайте или по телефону +7 (495) 585-82-03</span>
+                    <span class="text-center">Оформить заказ можно на сайте или по телефону</span>
+                    <a href="tel:+74955858203" class="how__tel">+7 (495) 585-82-03</a>
                     <a class="anchor__link call-title__button my-btn btn-green my-5" href="#menu_anchor">заказать</a>
                 </div>
             </div>
