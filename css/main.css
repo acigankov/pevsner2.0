@@ -597,8 +597,6 @@ a,a:focus,a:link,a:visited {
     font-size: 1.3rem !important;
 }
 
-
-
 .days-line button {
     min-width: 5.5rem;
 }
@@ -866,6 +864,14 @@ a,a:focus,a:link,a:visited {
 
 a.call-title__button:hover {
     text-decoration: none;
+}
+
+.call__tel {
+    color: #000 !important;
+}
+.call__tel:hover {
+    text-decoration: none;
+    opacity: 0.7;
 }
 
 /*section call end*/

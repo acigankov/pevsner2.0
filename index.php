@@ -567,7 +567,7 @@
                     <img src="img/design/sections/call/apple.png" alt="image">
                 </div>
                 <div class="section-title">
-                    <h3 class="text-color-green">Узнайте больше про наше меню</h3>
+                    <h3 class="text-color-green px-2">Узнайте больше про наше меню</h3>
                 </div>
             </div>
             <div class="row">
@@ -577,7 +577,7 @@
                         и мы подготовим для вас меню.
                     </span>
                     <div class="section-title">
-                        <h3 class="text-color-green">Остались вопросы? закажи обратный звонок</h3>
+                        <h3 class="text-color-green px-2">Остались вопросы? Позвоните по телефону <a href="tel:+74955858203" class="call__tel" title="Телефон в Москве: +7 (495) 585-82-03">+7 (495) 585-82-03</a> или закажите обратный звонок</h3>
                     </div>
                     <a class="call-title__button my-btn btn-green mt-2 mb-5" href="#menu_anchor" data-toggle="modal"
                         data-target="#modal-call">заказать</a>
