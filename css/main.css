@@ -270,9 +270,9 @@ a,a:focus,a:link,a:visited {
     text-decoration: none;
     border: 1px solid;
     box-shadow: 0 0 10px 2px #fff;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+    --moz-transition: all 0.3s ease;
+    --webkit-transition: all 0.3s ease;
+    --o-transition: all 0.3s ease;
     opacity: 0.8;
 } 
 
