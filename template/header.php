@@ -127,13 +127,13 @@ $orderUrl = $orderUrl[0];
                         </div>
 
                         <div class="top-line__phone d-flex flex-column justify-content-betweenml-2">
-                            <span class="top-line__city "><i class="fab fa-instagram" style="text-align: center;"></i>
-                                &nbsp; <a href="https://www.instagram.com/dieta_pevsner.ru/"
-                                    target="_blank">Instagram</a></span>
-                            <a href="tel:+74955858203" class="d-flex"><span><i
-                                        class="fas fa-phone"></i></span>&nbsp; +7 (495) 585-8203</a>
-                            <span class="align-items-center d-flex"><i class="fas fa-business-time"></i> &nbsp; 08:00 -
-                                20:00</span>
+                            <a href="tel:+74955858203" class="d-flex"><span><i class="fas fa-phone"></i></span>&nbsp; +7 (495) 585-8203</a>
+                            <span class="align-items-center d-flex"><i class="fas fa-business-time"></i> &nbsp; 08:00 - 20:00</span>
+                            <span class="top-line__city ">
+                                <i class="fab fa-instagram" style="text-align: center;"></i>
+                                &nbsp;
+                                <a href="https://www.instagram.com/dieta_pevsner.ru/" target="_blank">Instagram</a>
+                            </span>
                             <!--<button class="my-btn btn-green">перезвоните мне</button>-->
                         </div>
                         <?php if($orderUrl === '/') :?>
