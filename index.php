@@ -341,7 +341,7 @@
                     <div class="menu-cards-content__item card shadow">
                         <div class="card-body">
                             <div class="card-title"><?= $foodset['name'] ?></div>
-                            <?php if($foodset['sum_for_show'] == 1490):?>
+                            <?php if($foodset['sum_for_show'] == 149000): //костыль для акций. TODO сделать нормальный вывод, если попросят :)?>
                             <h6 class="card-subtitle"><span
                                     style="text-decoration:line-through; color: red;"><?=$foodset['sum_for_show']?></span>
                                 990 руб/день</h6>

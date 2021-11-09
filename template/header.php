@@ -130,7 +130,7 @@ $orderUrl = $orderUrl[0];
                             <span class="top-line__city "><i class="fab fa-instagram" style="text-align: center;"></i>
                                 &nbsp; <a href="https://www.instagram.com/dieta_pevsner.ru/"
                                     target="_blank">Instagram</a></span>
-                            <a href="tel:+74955858203" class="d-none d-sm-flex"><span><i
+                            <a href="tel:+74955858203" class="d-flex"><span><i
                                         class="fas fa-phone"></i></span>&nbsp; +7 (495) 585-8203</a>
                             <span class="align-items-center d-flex"><i class="fas fa-business-time"></i> &nbsp; 08:00 -
                                 20:00</span>
