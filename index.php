@@ -584,6 +584,8 @@
         </div>
     </section>
 
+
+    <?php if ($showPromocode) : ?>                
     <section class="promotion">
         <div class="container bg-color-white">
             <div class="row ">
@@ -617,6 +619,7 @@
             </div>
         </div>
     </section>
+    <?php endif ?>
 
 
     <section class="info">

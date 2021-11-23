@@ -43,6 +43,7 @@ $showOrderButton = true;
 $showPevsnerSection = true;
 $checkRegionInOrderPage = true;
 $showKBGU = false;
+$showPromocode = false;
 
 //КБЖУ ух костыль) 
 
