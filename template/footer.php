@@ -134,6 +134,9 @@ ym(54740014, "init", {
         <script src="/js/custom.js"></script>
         <script src="/js/menu.js"></script>
         <script src="/js/check-region.js"></script>
+        <script src="/js/promocodes.js"></script>
+        <script src="/js/order.js"></script>
+        <script src="/js/actions.js"></script>
         </body>
 
         </html>

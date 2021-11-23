@@ -257,8 +257,8 @@ if (isset($_POST['form_order'])) {
     } 
     
     //был промокод
-    if (isset($_POST['has_promo'])) {
-        $has_promo = true;
+    if (isset($_POST['has_promo']) && !empty($_POST['has_promo'])) {
+        $has_promo = $_POST['has_promo'];
     } else {
         $has_promo = false;
     } 
@@ -311,6 +311,9 @@ if (isset($_POST['form_order'])) {
                     $payment_api_code = '94';
                     break;
             }
+
+            $has_promo = $has_promo ? $has_promo : 'Нет';
+
             //отправляем себе данные о заказе
             $to = 'acigankov@inbox.ru, v.v.ilyin@yandex.ru, zakaz@pevsner.ru';
             $subject = '«Pevsner.ru». Новый заказ';
@@ -327,8 +330,8 @@ if (isset($_POST['form_order'])) {
                     . 'Стол : ' . $selected_table . ' <br>' . "\r\n"
                     . 'Доп блюдо 1 : ' . $add_kisel . ' <br>' . "\r\n"
                     . 'Доп блюдо 2 : ' . $add_product . ' <br>' . "\r\n"
+                    . 'Купон применен : ' . $has_promo . ' <br>' . "\r\n"
                     . 'Когда привезти : ' . $delivery_time . ' <br>' . "\r\n"
-                    . 'Купон применен : ' . $has_promo = $has_promo ? 'Да' : 'Нет' . ' <br>' . "\r\n"
                     . 'Комментарий : ' . $comment . ' <br>' . "\r\n";
             // Для отправки HTML-письма должен быть установлен заголовок Content-type
             
@@ -345,9 +348,10 @@ if (isset($_POST['form_order'])) {
                 . 'Доп блюдо 2 : ' . $add_product . PHP_EOL
                 . 'Номер Заказа  : ' . $order_num . PHP_EOL
                 . 'Способ Оплаты : ' . $payment_type_for_email .  PHP_EOL
+                . 'Купон применен : ' . $has_promo . PHP_EOL
                 . 'Когда привезти: ' . $delivery_time .  PHP_EOL
                 . 'Комментарий: ' . $comment .  PHP_EOL;
-                
+
             //отправляем сообщеньку в телеграм
             sendMessageTelegram($message_to_telegram);
 
@@ -364,8 +368,6 @@ if (isset($_POST['form_order'])) {
             ];
 
             sendOrderToFrontpad($orderDetails);
-
-
             
             $headers = 'Content-type: text/html; charset=utf-8' . "\r\n" .
                     'MIME-Version: 1.0' . "\r\n" .
@@ -374,7 +376,6 @@ if (isset($_POST['form_order'])) {
                     'Reply-To: zakaz@pevsner.ru' . "\r\n" .
                     'Return-Path: zakaz@pevsner.ru' . "\r\n" .
                     'X-Mailer: PHP/' . phpversion();
-
 
             if (mail($to, $subject, $message, $headers, '-f zakaz@pevsner.ru')) {
                 //если писмьо ушло себе, отправляем чуваку

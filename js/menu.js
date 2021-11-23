@@ -108,5 +108,20 @@ function getMenu(table_id , day_id = 1) {
     });
 }
 
+  //переключалки меню
+
+  //    $('#pills-tab-select').on('change', function (e) {
+  //        e.preventDefault();
+  //        var id = "#" + $(this).val();
+  //        console.log(id);
+  //        $(id).tab('show');
+  //    });
+  //
+
+  $(".days-line button").on("click", function (e) {
+    e.preventDefault();
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+
 
 //конец файла
