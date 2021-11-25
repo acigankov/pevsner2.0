@@ -51,7 +51,7 @@
   });
 
   function redeemPromoCodeCrutch (code) {
-    if (code == 'sberbank' || code == 'doctorgastro') {
+    if (code) {
       $("#redeem-result_")
           .text("купон применен! ")
           .removeClass("text-muted")

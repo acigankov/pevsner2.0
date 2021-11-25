@@ -258,7 +258,7 @@ if (isset($_POST['form_order'])) {
     
     //был промокод
     if (isset($_POST['has_promo']) && !empty($_POST['has_promo'])) {
-        $has_promo = $_POST['has_promo'];
+        $has_promo = htmlspecialchars($_POST['has_promo']);
     } else {
         $has_promo = false;
     } 
