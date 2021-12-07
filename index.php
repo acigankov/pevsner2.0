@@ -467,7 +467,7 @@
         <div class="container bg-color-white pt-5">
             <div class="row">
                 <div class="section-title">
-                    <h3>Ограничения по столам Певзена #1-15</h3>
+                    <h3>Ограничения по столам Певзнера #1-15</h3>
                 </div>
             </div>
 
