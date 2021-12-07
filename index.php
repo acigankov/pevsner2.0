@@ -380,7 +380,6 @@
         </div>
     </section>
 
-
     <section class="testimonials" id="testimonials">
         <div class="container bg-color-white">
             <div class="row">
@@ -427,8 +426,6 @@
         </div>
     </section>
 
-
-
     <section class="map">
         <div class="container bg-color-white">
             <div class="row">
@@ -463,7 +460,7 @@
     </section>
 
     <?php if ($showSektionBooklet) : ?>
-        <section class="booklet">
+        <section class="booklet" id="booklet">
         <div class="container bg-color-white pt-5">
             <div class="row">
                 <div class="section-title">
