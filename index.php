@@ -462,6 +462,49 @@
         </div>
     </section>
 
+    <?php if ($showSektionBooklet) : ?>
+        <section class="booklet">
+        <div class="container bg-color-white pt-5">
+            <div class="row">
+                <div class="section-title">
+                    <h3>Ограничения по столам Певзена #1-15</h3>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center bg-color-white py-3">
+                <div class="col-md-4 ">
+                    <select class="custom-select" id="booklet-select" role="tablist" data-booklet-table>
+                        <?php foreach ($tables as $table) : ?>
+                        <option value="<?= $table['id']?>"><?= $table['name']?></option>
+                        <?php endforeach ?>
+                    </select>
+                </div>
+            </div>
+            <div class="booklet-content mt-3">
+                <table class="table table-striped booklet-content__table" >
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:5%;">#</th>
+                            <th scope="col" style="width:15%;" class="text-right">Продукты</th>
+                            <th scope="col" style="width:80%;" class="text-left">Ограничения</th>
+                        </tr>
+                    </thead>
+                    <tbody data-booklet-content>
+                        <?php foreach ($restrictions as $key => $r) : ?>
+                            <tr>
+                                <th scope="row" style="width:5%;"><?= $key + 1 ?></th>
+                                <td style="width:15%;" class="text-right"><?= $r['name']?></td> 
+                                <td style="width:80%;" class="text-left"><?= $r['restriction_text']?></td>
+                            </tr>                                
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </section>
+
+    <?php endif ?>
+
     <?php if ($showSectionAkcii) : ?>
     <section class="akcii">
         <div class="container bg-color-white">

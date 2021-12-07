@@ -31,6 +31,7 @@ $fooddays = getFooddays();
 $dishes_first = getDishes(1, 1);
 $testimonials = getTestimonials();
 $timer_section = false;
+$restrictions = getRestrictionsByTableId(1);
 
 
 //Блоки в верстке
@@ -44,6 +45,7 @@ $showPevsnerSection = true;
 $checkRegionInOrderPage = true;
 $showKBGU = false;
 $showPromocode = false;
+$showSektionBooklet = true;
 
 //КБЖУ ух костыль) 
 

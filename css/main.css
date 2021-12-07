@@ -1146,3 +1146,32 @@ footer i {
 
 /*accordion faq end*/
 
+/*section booklet*/
+.booklet-content__row {
+    border-bottom: 1px solid gray;
+}
+
+.booklet-content__col {
+    display: flex;
+    flex-basis: 33.33%;
+}
+
+.booklet-content__table {
+    margin: 0 !important;
+}
+
+@media screen and (max-width: 576px) {
+    .booklet-content__table {
+        font-size: 12px;
+    }
+}
+
+.booklet-content tr {
+    text-align: center;
+}
+
+.booklet-content tr>th, .booklet-content tr>td {
+    vertical-align: middle;
+}
+
+/*section booklet end*/

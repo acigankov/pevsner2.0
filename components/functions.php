@@ -693,6 +693,34 @@ function saveTestimonial($name, $tel_for_bd, $comment) {
     return false;
 }
 
+/**
+ * Получает таблицу ограничений
+ * @params 
+ * @return array
+ */
+
+function getRestrictionsByTableId($table_id) {
+    
+    $db = DB::getConnection();
+
+    $sql = 'SELECT br.name as name, bv.restriction_text FROM booklet_views as bv
+    LEFT JOIN booklet_restrictions as br ON bv.booklet_restrction = br.id
+    WHERE bv.table_id = :table_id';
+
+    $result = $db->prepare($sql);
+    $result->bindParam(':table_id', $table_id, PDO::PARAM_INT);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();     
+    $retrictions = $result->fetchAll();
+    
+    if ($retrictions) {
+        return $retrictions;
+    }
+    else return 'null';
+
+return false;
+}
+
 
 //передача заказа во фронтпад////////////
 
