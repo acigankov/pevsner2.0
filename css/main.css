@@ -6,7 +6,7 @@
 }
 
 /*#button-up start*/
-#button-up {
+/* #button-up {
     display: none;
     position: fixed;
     right: 8%;
@@ -31,7 +31,7 @@
     background-color: #fff;
     border: 1px solid #222;
     color:var(--accent-color)
-}
+} */
     /*#button-up end*/
     
     

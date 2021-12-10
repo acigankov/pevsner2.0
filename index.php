@@ -460,10 +460,10 @@
     </section>
 
     <?php if ($showSektionBooklet) : ?>
-        <section class="booklet" id="booklet">
+        <section class="booklet">
         <div class="container bg-color-white pt-5">
             <div class="row">
-                <div class="section-title">
+                <div class="section-title" id="booklet">
                     <h3>Ограничения по столам Певзнера #1-15</h3>
                 </div>
             </div>
@@ -497,6 +497,9 @@
                     </tbody>
                 </table>
             </div>
+            <div class="row justify-content-center align-items-center pt-5 w-100">
+                <button class="my-btn btn-green px-5" id="button-up" type="button">ВВЕРХ&nbsp;&nbsp;<i class="fas fa-arrow-up" style="font-size:12px"></i></button>
+            </div>    
         </div>
         </section>
 

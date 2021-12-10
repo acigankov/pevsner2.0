@@ -111,7 +111,7 @@ $orderUrl = $orderUrl[0];
         <img height="1" width="1" src="https://www.facebook.com/tr?id=499479300709526&ev=PageView&noscript=1" alt="" />
     </noscript>
     <!--button UP-->
-    <div id="button-up" class="animated fadeInRightBig"><i class="fas fa-arrow-up"></i></div>
+    <!-- <div id="button-up" class="animated fadeInRightBig"><i class="fas fa-arrow-up"></i></div> -->
     <!--конец button UP-->
     <!--button CALL-->
     <a class="pulse" href="https://wa.me/79268915187" target="_blank"><i class="fab fa-whatsapp"></i></a>
