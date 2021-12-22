@@ -367,7 +367,7 @@
         </div>
     </section>
 
-    <section class="banner" id="banner">
+    <section class="banner" id="banner-ny">
         <div class="container bg-color-white">
             <div class="banner__img d-flex align-items-center justify-content-center w-100 py-3">
                 <a href="https://www.instagram.com/dieta_pevsner.ru/" target="_blank">
