@@ -370,7 +370,7 @@
     <section class="banner" id="banner">
         <div class="container bg-color-white">
             <div class="banner__img d-flex align-items-center justify-content-center w-100 py-3">
-                <a class="anchor__link" href="#checkout_anchor">
+                <a href="https://www.instagram.com/dieta_pevsner.ru/" target="_blank">
                     <img src="img/design/sections/banner/ny-big.jpg" alt="banner"
                         class="img-fluid banner__img_big d-none d-md-inline">
                     <img src="img/design/sections/banner/ny-mob.jpg" alt="banner"
