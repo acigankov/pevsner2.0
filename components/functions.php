@@ -704,7 +704,7 @@ function getRestrictionsByTableId($table_id) {
     $db = DB::getConnection();
 
     $sql = 'SELECT br.name as name, bv.restriction_text FROM booklet_views as bv
-    LEFT JOIN booklet_restrictions as br ON bv.booklet_restrction = br.id
+    LEFT JOIN booklet_restrictions as br ON bv.booklet_restriction = br.id
     WHERE bv.table_id = :table_id';
 
     $result = $db->prepare($sql);
