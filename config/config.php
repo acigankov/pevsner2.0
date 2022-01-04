@@ -33,7 +33,7 @@ $testimonials = getTestimonials();
 $timer_section = false;
 $restrictions = getRestrictionsByTableId(1);
 
-
+ 
 //Блоки в верстке
 $maintenanceMode = false;
 $showWAphone = true;
