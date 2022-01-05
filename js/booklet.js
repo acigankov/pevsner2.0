@@ -23,7 +23,6 @@ $('[data-booklet-table]').on('change', function (e) {
 
                 let content = '';
                 for (let i = 0; i < result.length; i++) {
-                    console.log(result[i]['restriction_text']);
                     
                     content += '<tr><th style="width:5%;" scope="row">' + (i + 1) + '</th><td style="width:15%;" class="text-right">' + result[i]['name'] + '</td><td style="width:80%;" class="text-left">' + result[i]['restriction_text'] + '</td></tr>';
                 }
